@@ -13,11 +13,12 @@ namespace xyLOGIX.Data.Scrapers.Services
         /// <summary>
         /// Occurs when an exception is thrown during an scraping operation.
         /// </summary>
-        public event ScraperServiceExceptionRaisedEventHandler ScraperServiceExceptionRaised;
+        public event ScraperServiceExceptionRaisedEventHandler
+            ScraperServiceExceptionRaised;
 
         /// <summary>
         /// Gets the HTML content of the Web resource with the specified
-        /// <paramref name="url"/>.
+        /// <paramref name="url" />.
         /// </summary>
         /// <param name="url">
         /// (Required.) String containing the URL of the page to download and parse.
@@ -27,7 +28,7 @@ namespace xyLOGIX.Data.Scrapers.Services
         /// problem occurred.
         /// </returns>
         /// <exception cref="T:System.ArgumentException">
-        /// Thrown if the required parameter, <paramref name="url"/>, is blank.
+        /// Thrown if the required parameter, <paramref name="url" />, is blank.
         /// </exception>
         public string GetHtmlContent(string url)
         {
@@ -55,9 +56,11 @@ namespace xyLOGIX.Data.Scrapers.Services
         }
 
         /// <summary>
-        /// Obtains the HTML from the specified <paramref name="url"/> and then
-        /// extracts the inner-text content of the element at the <paramref
-        /// name="xpath"/> provided.
+        /// Obtains the HTML from the specified <paramref name="url" /> and then
+        /// extracts the inner-text content of the element at the
+        /// <paramref
+        ///     name="xpath" />
+        /// provided.
         /// </summary>
         /// <param name="url">
         /// (Required.) String containing the URL of the page to download and parse.
@@ -68,12 +71,14 @@ namespace xyLOGIX.Data.Scrapers.Services
         /// </param>
         /// <returns>
         /// String containing the inner textual content of the tag looked up by
-        /// the <paramref name="xpath"/> query provided, or blank if the tag was
+        /// the <paramref name="xpath" /> query provided, or blank if the tag was
         /// not found or a problem occurred.
         /// </returns>
         /// <exception cref="T:System.ArgumentException">
-        /// Thrown if either of the two required parameters, <paramref
-        /// name="url"/> or <paramref name="xpath"/>, are blank.
+        /// Thrown if either of the two required parameters,
+        /// <paramref
+        ///     name="url" />
+        /// or <paramref name="xpath" />, are blank.
         /// </exception>
         public string GetTagContent(string url, string xpath)
         {
@@ -91,7 +96,10 @@ namespace xyLOGIX.Data.Scrapers.Services
             try
             {
                 var web = new HtmlWeb();
+
                 var doc = web.Load(url);
+                if (doc == null)
+                    ThrowScraperEngineInitializationFailedException();
 
                 var link = doc.DocumentNode.SelectSingleNode(xpath);
 
@@ -110,15 +118,28 @@ namespace xyLOGIX.Data.Scrapers.Services
         }
 
         /// <summary>
-        /// Raises the <see
-        /// cref="E:CoinMarketCap.Data.Scraper.Helpers.Scraper.ScraperServiceExceptionRaised"/> event.
+        /// Throws a <see cref="T:System.InvalidOperationException" /> that
+        /// indicates the scraping engine could not be initialized.
+        /// </summary>
+        private static void ThrowScraperEngineInitializationFailedException()
+            => throw new InvalidOperationException(
+                "Unable to initialize HTML scraping engine."
+            );
+
+        /// <summary>
+        /// Raises the
+        /// <see
+        ///     cref="E:CoinMarketCap.Data.Scraper.Helpers.Scraper.ScraperServiceExceptionRaised" />
+        /// event.
         /// </summary>
         /// <param name="e">
-        /// A <see
-        /// cref="T:CoinMarketCap.Data.Scraper.Helpers.Events.ScraperServiceExceptionRaisedEventArgs"/>
+        /// A
+        /// <see
+        ///     cref="T:CoinMarketCap.Data.Scraper.Helpers.Events.ScraperServiceExceptionRaisedEventArgs" />
         /// that contains the event data.
         /// </param>
-        private void OnScraperServiceExceptionRaised(ScraperServiceExceptionRaisedEventArgs e)
+        private void OnScraperServiceExceptionRaised(
+            ScraperServiceExceptionRaisedEventArgs e)
             => ScraperServiceExceptionRaised?.Invoke(this, e);
     }
 }

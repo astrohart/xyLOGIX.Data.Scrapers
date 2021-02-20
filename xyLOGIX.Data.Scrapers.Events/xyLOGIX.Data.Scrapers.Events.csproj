@@ -74,6 +74,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ScraperExceptionRaisedEventArgs.cs" />
+    <Compile Include="ScraperExceptionRaisedEventHandler.cs" />
+    <Compile Include="ScrapingStartedEventArgs.cs" />
+    <Compile Include="ScrapingStartedEventHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

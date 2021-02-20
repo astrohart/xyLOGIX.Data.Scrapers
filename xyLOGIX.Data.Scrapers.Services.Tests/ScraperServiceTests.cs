@@ -2,6 +2,7 @@
 using System;
 using xyLOGIX.Data.Scrapers.Events;
 using xyLOGIX.Data.Scrapers.Interfaces;
+using xyLOGIX.Data.Scrapers.Services.Factories;
 
 namespace xyLOGIX.Data.Scrapers.Services.Tests
 {
@@ -23,7 +24,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
         [SetUp]
         public void Initialize()
         {
-            _scraperService = new ScraperService();
+            _scraperService = new ScraperServiceFactory().Make();
             _scraperService.ScraperServiceExceptionRaised +=
                 OnScraperServiceExceptionRaised;
         }

@@ -3,7 +3,7 @@ using System;
 using xyLOGIX.Data.Scrapers.Events;
 using xyLOGIX.Data.Scrapers.Interfaces;
 
-namespace xyLOGIX.Data.Scrapers
+namespace xyLOGIX.Data.Scrapers.Services
 {
     /// <summary>
     /// Scrapes content from the Web and provides parsing helper methods.
@@ -11,7 +11,7 @@ namespace xyLOGIX.Data.Scrapers
     public sealed class ScraperService : IScraperService
     {
         /// <summary>
-        /// Occurs when an exception is thrown during an operation.
+        /// Occurs when an exception is thrown during an scraping operation.
         /// </summary>
         public event ScraperServiceExceptionRaisedEventHandler ScraperServiceExceptionRaised;
 

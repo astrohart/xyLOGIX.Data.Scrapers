@@ -1,4 +1,7 @@
-﻿namespace xyLOGIX.Data.Scrapers.Services.Factories
+﻿using xyLOGIX.Data.Scrapers.Interfaces;
+using xyLOGIX.Data.Scrapers.Services.Factories.Interfaces;
+
+namespace xyLOGIX.Data.Scrapers.Services.Factories
 {
     /// <summary>
     /// Creates instances of objects that implement the

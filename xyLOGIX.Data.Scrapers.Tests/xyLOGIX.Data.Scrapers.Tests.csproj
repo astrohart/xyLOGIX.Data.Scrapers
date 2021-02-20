@@ -6,7 +6,7 @@
     <ApplicationIcon>1382_cogs.ico</ApplicationIcon>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile />
-    <ProjectGuid>{6A5BF1D0-66A7-4350-A26D-15A0CF0DDB5A}</ProjectGuid>
+    <ProjectGuid>{FA4B7958-3A7C-4F99-AA4B-44ECABDFFA01}</ProjectGuid>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>

@@ -98,10 +98,6 @@
       <Project>{520A4FBF-2682-49D5-9D44-1E8D042CE651}</Project>
       <Name>xyLOGIX.Data.Scrapers.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\xyLOGIX.Data.Scrapers\xyLOGIX.Data.Scrapers.csproj">
-      <Project>{9DCA261B-0CC3-4F49-8384-F281E098B621}</Project>
-      <Name>xyLOGIX.Data.Scrapers</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

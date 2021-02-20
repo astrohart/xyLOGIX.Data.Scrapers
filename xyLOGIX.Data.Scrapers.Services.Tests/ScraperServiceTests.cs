@@ -3,28 +3,29 @@ using System;
 using xyLOGIX.Data.Scrapers.Events;
 using xyLOGIX.Data.Scrapers.Interfaces;
 
-namespace xyLOGIX.Data.Scrapers.Tests
+namespace xyLOGIX.Data.Scrapers.Services.Tests
 {
-   /// <summary>
-   /// Unit tests for objects that implement the
-   /// <see
-   ///     cref="T:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraper" />
-   /// interface.
-   /// </summary>
-   [TestFixture]
+    /// <summary>
+    /// Unit tests for objects that implement the
+    /// <see
+    ///     cref="T:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService" />
+    /// interface.
+    /// </summary>
+    [TestFixture]
     public class ScraperServiceTests
     {
-       /// <summary>
-       /// Initializes the dependency variable
-       /// <see
-       ///     cref="F:xyLOGIX.Data.Scrapers.Tests.ScraperTests._scraper" />
-       /// .
-       /// </summary>
-       [SetUp]
+        /// <summary>
+        /// Initializes the dependency variable
+        /// <see
+        ///     cref="F:xyLOGIX.Data.Scrapers.Tests.ScraperTests._scraper" />
+        /// .
+        /// </summary>
+        [SetUp]
         public void Initialize()
         {
             _scraperService = new ScraperService();
-            _scraperService.ScraperExceptionRaised += OnExceptionRaised;
+            _scraperService.ScraperServiceExceptionRaised +=
+                OnScraperServiceExceptionRaised;
         }
 
         /// <summary>
@@ -58,7 +59,7 @@ namespace xyLOGIX.Data.Scrapers.Tests
         /// <summary>
         /// Reference to an instance of a class that implements the
         /// <see
-        ///     cref="T:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraper" />
+        ///     cref="T:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService" />
         /// interface.
         /// </summary>
         /// <remarks>
@@ -69,7 +70,7 @@ namespace xyLOGIX.Data.Scrapers.Tests
         /// <summary>
         /// Asserts the
         /// <see
-        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraper.GetHtmlContent" />
+        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetHtmlContent" />
         /// method returns nothing when fed a nonsensical website URL from which
         /// to retrieve the HTML content.
         /// </summary>
@@ -86,9 +87,9 @@ namespace xyLOGIX.Data.Scrapers.Tests
         /// <summary>
         /// Asserts the
         /// <see
-        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraper.GetHtmlContent" />
-        /// method throws a <see cref="T:System.ArgumentException" /> when given a
-        /// blank value for the URL from which to obtain content from.
+        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetHtmlContent" />
+        /// method throws a <see cref="T:System.ArgumentException" /> when given
+        /// a blank value for the URL from which to obtain content from.
         /// </summary>
         [Test]
         public void
@@ -104,7 +105,7 @@ namespace xyLOGIX.Data.Scrapers.Tests
         /// <summary>
         /// Asserts the
         /// <see
-        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.IScraper.GetHtmlContent" />
+        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.IScraperService.GetHtmlContent" />
         /// method returns the HTML content for the homepage of the example.com
         /// website when fed a valid URL for the website.
         /// </summary>
@@ -122,9 +123,10 @@ namespace xyLOGIX.Data.Scrapers.Tests
         /// <summary>
         /// Asserts the
         /// <see
-        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.IScraper.GetTagContent" />
+        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.IScraperService.GetTagContent" />
         /// method returns the correct content of the &lt;h1&gt; tag in the body
-        /// of the homepage HTML content of the example.com website when fed valid XPATH.
+        /// of the homepage HTML content of the example.com website when fed
+        /// valid XPATH.
         /// </summary>
         [Test]
         public void Test_GetTagContent_ForExampleDotComH1_Works()
@@ -142,7 +144,7 @@ namespace xyLOGIX.Data.Scrapers.Tests
         /// <summary>
         /// Asserts the
         /// <see
-        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraper.GetTagContent" />
+        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent" />
         /// method returns the empty string when fed a valid URL for the
         /// example.com website but invalid XPATH for the page header.
         /// </summary>
@@ -162,9 +164,9 @@ namespace xyLOGIX.Data.Scrapers.Tests
         /// <summary>
         /// Asserts the
         /// <see
-        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraper.GetTagContent" />
-        /// method returns the empty string when fed invalid (but non-blank) data
-        /// for both its parameters.
+        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent" />
+        /// method returns the empty string when fed invalid (but non-blank)
+        /// data for both its parameters.
         /// </summary>
         [Test]
         public void
@@ -182,7 +184,7 @@ namespace xyLOGIX.Data.Scrapers.Tests
         /// <summary>
         /// Asserts the
         /// <see
-        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraper.GetTagContent" />
+        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent" />
         /// method returns the empty string when fed an invalid URL for its url
         /// parameter, despite being provided valid XPATH.
         /// </summary>
@@ -202,7 +204,7 @@ namespace xyLOGIX.Data.Scrapers.Tests
         /// <summary>
         /// Asserts the
         /// <see
-        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraper.GetTagContent" />
+        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent" />
         /// method returns the empty string when fed a valid URL for its url
         /// parameter, despite being provided invalid XPATH.
         /// </summary>
@@ -222,7 +224,7 @@ namespace xyLOGIX.Data.Scrapers.Tests
         /// <summary>
         /// Asserts the
         /// <see
-        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraper.GetTagContent" />
+        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent" />
         /// method throws a <see cref="T:System.ArgumentException" /> when the
         /// empty string is passed for both of its parameters.
         /// </summary>
@@ -242,7 +244,7 @@ namespace xyLOGIX.Data.Scrapers.Tests
         /// <summary>
         /// Asserts the
         /// <see
-        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraper.GetTagContent" />
+        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent" />
         /// method throws a <see cref="T:System.ArgumentException" /> when a
         /// non-blank string is passed for its xpath parameter, and the empty
         /// string is passed for its url parameter.
@@ -263,10 +265,10 @@ namespace xyLOGIX.Data.Scrapers.Tests
         /// <summary>
         /// Asserts the
         /// <see
-        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraper.GetTagContent" />
+        ///     cref="M:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent" />
         /// method throws a <see cref="T:System.ArgumentException" /> when a
-        /// non-blank string is passed for its URL parameter, and the empty string
-        /// is passed for its xpath parameter.
+        /// non-blank string is passed for its URL parameter, and the empty
+        /// string is passed for its xpath parameter.
         /// </summary>
         [Test]
         public void
@@ -284,7 +286,7 @@ namespace xyLOGIX.Data.Scrapers.Tests
         /// <summary>
         /// Handles the
         /// <see
-        ///     cref="E:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraper.ExceptionRaised" />
+        ///     cref="E:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.ExceptionRaised" />
         /// event.
         /// </summary>
         /// <param name="sender">
@@ -296,9 +298,11 @@ namespace xyLOGIX.Data.Scrapers.Tests
         /// <remarks>
         /// This method reports the error information to the console.
         /// </remarks>
-        private static void OnExceptionRaised(object sender,
-            ScraperExceptionRaisedEventArgs e)
+        private static void OnScraperServiceExceptionRaised(object sender,
+            ScraperServiceExceptionRaisedEventArgs e)
         {
+            if (e == null) return;
+
             Console.WriteLine(
                 $"Error scraping page with URL '{e.Url}'.\nException\n{e.Exception}"
             );

@@ -10,7 +10,7 @@ namespace xyLOGIX.Data.Scrapers.Interfaces
       /// <summary>
       /// Occurs when an exception is thrown during an operation.
       /// </summary>
-      event ScraperExceptionRaisedEventHandler ScraperExceptionRaised;
+      event ScraperServiceExceptionRaisedEventHandler ScraperServiceExceptionRaised;
 
       /// <summary>
       /// Gets the HTML content of the Web resource with the specified <paramref name="url"/>.

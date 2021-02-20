@@ -3,9 +3,9 @@
 namespace xyLOGIX.Data.Scrapers.Events
 {
     /// <summary>
-    /// Defines the data that is passed by all <c>ScraperExceptionRaised</c> events.
+    /// Defines the data that is passed by all <c>ScraperServiceExceptionRaised</c> events.
     /// </summary>
-    public class ScraperExceptionRaisedEventArgs : EventArgs
+    public class ScraperServiceExceptionRaisedEventArgs : EventArgs
     {
        /// <summary>
        /// Creates a new instance of
@@ -25,7 +25,7 @@ namespace xyLOGIX.Data.Scrapers.Events
        /// <exception cref="T:System.ArgumentNullException">
        /// Thrown if the required parameter, <paramref name="exception" /> is <c>null</c>.
        /// </exception>
-       public ScraperExceptionRaisedEventArgs(string url, Exception exception)
+       public ScraperServiceExceptionRaisedEventArgs(string url, Exception exception)
         {
             if (string.IsNullOrWhiteSpace(url))
                 throw new ArgumentException(

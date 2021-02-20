@@ -13,7 +13,7 @@ namespace xyLOGIX.Data.Scrapers
         /// <summary>
         /// Occurs when an exception is thrown during an operation.
         /// </summary>
-        public event ScraperExceptionRaisedEventHandler ScraperExceptionRaised;
+        public event ScraperServiceExceptionRaisedEventHandler ScraperServiceExceptionRaised;
 
         /// <summary>
         /// Gets the HTML content of the Web resource with the specified
@@ -44,8 +44,8 @@ namespace xyLOGIX.Data.Scrapers
             }
             catch (Exception ex)
             {
-                OnScraperExceptionRaised(
-                    new ScraperExceptionRaisedEventArgs(url, ex)
+                OnScraperServiceExceptionRaised(
+                    new ScraperServiceExceptionRaisedEventArgs(url, ex)
                 );
 
                 result = string.Empty;
@@ -99,8 +99,8 @@ namespace xyLOGIX.Data.Scrapers
             }
             catch (Exception ex)
             {
-                OnScraperExceptionRaised(
-                    new ScraperExceptionRaisedEventArgs(url, ex)
+                OnScraperServiceExceptionRaised(
+                    new ScraperServiceExceptionRaisedEventArgs(url, ex)
                 );
 
                 result = string.Empty;
@@ -111,14 +111,14 @@ namespace xyLOGIX.Data.Scrapers
 
         /// <summary>
         /// Raises the <see
-        /// cref="E:CoinMarketCap.Data.Scraper.Helpers.Scraper.ScraperExceptionRaised"/> event.
+        /// cref="E:CoinMarketCap.Data.Scraper.Helpers.Scraper.ScraperServiceExceptionRaised"/> event.
         /// </summary>
         /// <param name="e">
         /// A <see
-        /// cref="T:CoinMarketCap.Data.Scraper.Helpers.Events.ScraperExceptionRaisedEventArgs"/>
+        /// cref="T:CoinMarketCap.Data.Scraper.Helpers.Events.ScraperServiceExceptionRaisedEventArgs"/>
         /// that contains the event data.
         /// </param>
-        private void OnScraperExceptionRaised(ScraperExceptionRaisedEventArgs e)
-            => ScraperExceptionRaised?.Invoke(this, e);
+        private void OnScraperServiceExceptionRaised(ScraperServiceExceptionRaisedEventArgs e)
+            => ScraperServiceExceptionRaised?.Invoke(this, e);
     }
 }

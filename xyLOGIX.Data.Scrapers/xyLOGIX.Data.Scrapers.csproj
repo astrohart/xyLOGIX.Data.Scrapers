@@ -84,5 +84,27 @@
   <ItemGroup>
     <Content Include="1382_cogs.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Constants\xyLOGIX.Data.Scrapers.Constants.csproj">
+      <Project>{b8c0087f-0e08-4168-9b1c-7e6a09868a4b}</Project>
+      <Name>xyLOGIX.Data.Scrapers.Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Events\xyLOGIX.Data.Scrapers.Events.csproj">
+      <Project>{c301438b-f57f-42ed-bff2-dbce1567aab8}</Project>
+      <Name>xyLOGIX.Data.Scrapers.Events</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Factories\xyLOGIX.Data.Scrapers.Factories.csproj">
+      <Project>{31988857-4d56-4ff9-88f4-250f0fc8454b}</Project>
+      <Name>xyLOGIX.Data.Scrapers.Factories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Interfaces\xyLOGIX.Data.Scrapers.Interfaces.csproj">
+      <Project>{12c8841d-7edf-48c4-befc-ec88e1719091}</Project>
+      <Name>xyLOGIX.Data.Scrapers.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Models\xyLOGIX.Data.Scrapers.Models.csproj">
+      <Project>{f6c2cbc3-57aa-449d-a2b4-ca23b906431f}</Project>
+      <Name>xyLOGIX.Data.Scrapers.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

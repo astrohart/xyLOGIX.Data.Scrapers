@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xyLOGIX.Data.Scrapers", "xy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xyLOGIX.Data.Scrapers.Factories", "xyLOGIX.Data.Scrapers.Factories\xyLOGIX.Data.Scrapers.Factories.csproj", "{31988857-4D56-4FF9-88F4-250F0FC8454B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xyLOGIX.Data.Scrapers.Constants", "xyLOGIX.Data.Scrapers.Constants\xyLOGIX.Data.Scrapers.Constants.csproj", "{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{31988857-4D56-4FF9-88F4-250F0FC8454B}.Release|x64.Build.0 = Release|x64
 		{31988857-4D56-4FF9-88F4-250F0FC8454B}.Release|x86.ActiveCfg = Release|x86
 		{31988857-4D56-4FF9-88F4-250F0FC8454B}.Release|x86.Build.0 = Release|x86
+		{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}.Debug|x64.ActiveCfg = Debug|x64
+		{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}.Debug|x64.Build.0 = Debug|x64
+		{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}.Debug|x86.ActiveCfg = Debug|x86
+		{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}.Debug|x86.Build.0 = Debug|x86
+		{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}.Release|x64.ActiveCfg = Release|x64
+		{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}.Release|x64.Build.0 = Release|x64
+		{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}.Release|x86.ActiveCfg = Release|x86
+		{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

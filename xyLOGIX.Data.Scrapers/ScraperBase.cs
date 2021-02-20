@@ -1,5 +1,6 @@
 using System;
 using xyLOGIX.Data.Paginators.Interfaces;
+using xyLOGIX.Data.Scrapers.Constants;
 using xyLOGIX.Data.Scrapers.Events;
 using xyLOGIX.Data.Scrapers.Interfaces;
 using xyLOGIX.Data.Scrapers.Services.Factories.Interfaces;
@@ -43,6 +44,13 @@ namespace xyLOGIX.Data.Scrapers
         /// Occurs when scraping is about to start.
         /// </summary>
         public event ScrapingStartedEventHandler ScrapingStarted;
+
+        /// <summary>
+        /// Gets the <see
+        /// cref="T:xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape"/> value
+        /// that indicates which website this scraper is being used to pull data from.
+        /// </summary>
+        public abstract WebsitesToScrape Website { get; }
 
         /// <summary>
         /// Determines whether we can scrape data or not.

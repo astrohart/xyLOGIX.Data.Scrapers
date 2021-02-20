@@ -98,6 +98,10 @@
       <Project>{D74EC18F-0A99-425E-94CF-9E38976CB7F7}</Project>
       <Name>xyLOGIX.Data.Paginators.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Constants\xyLOGIX.Data.Scrapers.Constants.csproj">
+      <Project>{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}</Project>
+      <Name>xyLOGIX.Data.Scrapers.Constants</Name>
+    </ProjectReference>
     <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Events\xyLOGIX.Data.Scrapers.Events.csproj">
       <Project>{C301438B-F57F-42ED-BFF2-DBCE1567AAB8}</Project>
       <Name>xyLOGIX.Data.Scrapers.Events</Name>

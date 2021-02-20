@@ -91,6 +91,10 @@
       <Project>{77158E7F-2624-4B99-B1DE-525773E24888}</Project>
       <Name>CoinMarketCap.Data.Scraper.Events</Name>
     </ProjectReference>
+    <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Constants\xyLOGIX.Data.Scrapers.Constants.csproj">
+      <Project>{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}</Project>
+      <Name>xyLOGIX.Data.Scrapers.Constants</Name>
+    </ProjectReference>
     <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Events\xyLOGIX.Data.Scrapers.Events.csproj">
       <Project>{c301438b-f57f-42ed-bff2-dbce1567aab8}</Project>
       <Name>xyLOGIX.Data.Scrapers.Events</Name>

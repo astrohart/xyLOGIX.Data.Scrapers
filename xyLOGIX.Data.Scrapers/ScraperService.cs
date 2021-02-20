@@ -8,7 +8,7 @@ namespace xyLOGIX.Data.Scrapers
     /// <summary>
     /// Scrapes content from the Web and provides parsing helper methods.
     /// </summary>
-    public sealed class Scraper : IScraper
+    public sealed class ScraperService : IScraperService
     {
         /// <summary>
         /// Occurs when an exception is thrown during an operation.

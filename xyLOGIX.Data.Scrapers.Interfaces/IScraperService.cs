@@ -5,7 +5,7 @@ namespace xyLOGIX.Data.Scrapers.Interfaces
    /// <summary>
    /// Defines the public-exposed methods and properties of a scraper object.
    /// </summary>
-   public interface IScraper
+   public interface IScraperService
    {
       /// <summary>
       /// Occurs when an exception is thrown during an operation.

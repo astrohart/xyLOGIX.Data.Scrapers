@@ -84,5 +84,15 @@
   <ItemGroup>
     <Content Include="1382_cogs.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Constants\xyLOGIX.Data.Scrapers.Constants.csproj">
+      <Project>{b8c0087f-0e08-4168-9b1c-7e6a09868a4b}</Project>
+      <Name>xyLOGIX.Data.Scrapers.Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Interfaces\xyLOGIX.Data.Scrapers.Interfaces.csproj">
+      <Project>{12c8841d-7edf-48c4-befc-ec88e1719091}</Project>
+      <Name>xyLOGIX.Data.Scrapers.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

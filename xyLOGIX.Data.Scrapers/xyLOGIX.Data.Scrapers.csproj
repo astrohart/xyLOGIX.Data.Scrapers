@@ -74,6 +74,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ScraperBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -87,6 +88,28 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CoinMarketCap.Data.Scraper\CoinMarketCap.Data.Scraper.Events\CoinMarketCap.Data.Scraper.Events.csproj">
+      <Project>{77158E7F-2624-4B99-B1DE-525773E24888}</Project>
+      <Name>CoinMarketCap.Data.Scraper.Events</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\xyLOGIX.Data.Paginators\xyLOGIX.Data.Paginators.Interfaces\xyLOGIX.Data.Paginators.Interfaces.csproj">
+      <Project>{D74EC18F-0A99-425E-94CF-9E38976CB7F7}</Project>
+      <Name>xyLOGIX.Data.Paginators.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Events\xyLOGIX.Data.Scrapers.Events.csproj">
+      <Project>{C301438B-F57F-42ED-BFF2-DBCE1567AAB8}</Project>
+      <Name>xyLOGIX.Data.Scrapers.Events</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Interfaces\xyLOGIX.Data.Scrapers.Interfaces.csproj">
+      <Project>{12C8841D-7EDF-48C4-BEFC-EC88E1719091}</Project>
+      <Name>xyLOGIX.Data.Scrapers.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Services.Factories.Interfaces\xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.csproj">
+      <Project>{7604D633-04D0-4F50-8ECD-0B73AF12D183}</Project>
+      <Name>xyLOGIX.Data.Scrapers.Services.Factories.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

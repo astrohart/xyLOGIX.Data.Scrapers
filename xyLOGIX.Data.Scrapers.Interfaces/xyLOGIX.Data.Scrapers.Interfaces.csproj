@@ -68,6 +68,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IScraper.cs" />
     <Compile Include="IScraperService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -86,6 +87,10 @@
     <Content Include="1382_cogs.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CoinMarketCap.Data.Scraper\CoinMarketCap.Data.Scraper.Events\CoinMarketCap.Data.Scraper.Events.csproj">
+      <Project>{77158E7F-2624-4B99-B1DE-525773E24888}</Project>
+      <Name>CoinMarketCap.Data.Scraper.Events</Name>
+    </ProjectReference>
     <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Events\xyLOGIX.Data.Scrapers.Events.csproj">
       <Project>{c301438b-f57f-42ed-bff2-dbce1567aab8}</Project>
       <Name>xyLOGIX.Data.Scrapers.Events</Name>

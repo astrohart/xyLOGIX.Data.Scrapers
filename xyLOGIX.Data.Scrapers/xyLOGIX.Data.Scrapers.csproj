@@ -7,7 +7,8 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <ProjectGuid>{9DCA261B-0CC3-4F49-8384-F281E098B621}</ProjectGuid>
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -122,6 +123,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\xyLOGIX.Data.Paginators\xyLOGIX.Data.Paginators.Interfaces\xyLOGIX.Data.Paginators.Interfaces.csproj">
+      <Project>{D74EC18F-0A99-425E-94CF-9E38976CB7F7}</Project>
+      <Name>xyLOGIX.Data.Paginators.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\xyLOGIX.Data.Scrapers.Constants\xyLOGIX.Data.Scrapers.Constants.csproj">
       <Project>{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}</Project>
       <Name>xyLOGIX.Data.Scrapers.Constants</Name>

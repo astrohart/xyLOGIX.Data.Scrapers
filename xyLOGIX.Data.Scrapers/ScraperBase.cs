@@ -14,8 +14,10 @@ namespace xyLOGIX.Data.Scrapers
     public abstract class ScraperBase : IScraper
     {
         /// <summary>
-        /// Instance of an object that implements the <see
-        /// cref="T:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IPaginator"/> interface.
+        /// Instance of an object that implements the
+        /// <see
+        ///     cref="T:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IPaginator" />
+        /// interface.
         /// </summary>
         /// <remarks>
         /// This object manages the paginator of scraped data for this class.
@@ -28,12 +30,32 @@ namespace xyLOGIX.Data.Scrapers
         protected IScraperService _scraperService;
 
         /// <summary>
-        /// Reference to an instance of an object that implements the <see
-        /// cref="T:xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory"/>
+        /// Reference to an instance of an object that implements the
+        /// <see
+        ///     cref="T:xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory" />
         /// interface which is responsible for giving us access to scraper
         /// service objects.
         /// </summary>
         protected IScraperServiceFactory _scraperServiceFactory;
+
+        /// <summary>
+        /// Constructs a new instance of
+        /// <see
+        ///     cref="T:xyLOGIX.Data.Scrapers.ScraperBase" />
+        /// and returns a reference
+        /// to it.
+        /// </summary>
+        /// <param name="paginator">
+        /// (Required.) Reference to an instance of an object that implements
+        /// the <see cref="T:xyLOGIX.Data.Paginators.Interfaces.IPaginator" /> interface.
+        /// </param>
+        /// <exception cref="T:System.ArgumentNullException">
+        /// Thrown if the required parameter, <paramref name="paginator" />, is
+        /// passed a <see langword="null" /> value.
+        /// </exception>
+        protected ScraperBase(IPaginator paginator)
+            => _paginator = paginator ??
+                            throw new ArgumentNullException(nameof(paginator));
 
         /// <summary>
         /// Occurs when the scrape operation is complete.
@@ -46,8 +68,10 @@ namespace xyLOGIX.Data.Scrapers
         public event ScrapingStartedEventHandler ScrapingStarted;
 
         /// <summary>
-        /// Gets the <see
-        /// cref="T:xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape"/> value
+        /// Gets the
+        /// <see
+        ///     cref="T:xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape" />
+        /// value
         /// that indicates which website this scraper is being used to pull data from.
         /// </summary>
         public abstract WebsitesToScrape Website { get; }
@@ -63,7 +87,7 @@ namespace xyLOGIX.Data.Scrapers
         /// <c>false</c> otherwise.
         /// </returns>
         /// <exception cref="T:System.ArgumentException">
-        /// Thrown if the required parameter, <paramref name="url"/>, is passed
+        /// Thrown if the required parameter, <paramref name="url" />, is passed
         /// a blank or <c>null</c> string for a value.
         /// </exception>
         public bool CanScrape(string url)
@@ -107,19 +131,25 @@ namespace xyLOGIX.Data.Scrapers
             => _paginator?.First();
 
         /// <summary>
-        /// Raises the <see
-        /// cref="E:xyLOGIX.Data.Scrapers.ScraperBase.ScrapeComplete"/> event.
+        /// Raises the
+        /// <see
+        ///     cref="E:xyLOGIX.Data.Scrapers.ScraperBase.ScrapeComplete" />
+        /// event.
         /// </summary>
         protected virtual void OnScrapeComplete()
             => ScrapeComplete?.Invoke(this, EventArgs.Empty);
 
         /// <summary>
-        /// Raises the <see
-        /// cref="E:xyLOGIX.Data.Scrapers.ScraperBase.ScrapingStarted"/> event.
+        /// Raises the
+        /// <see
+        ///     cref="E:xyLOGIX.Data.Scrapers.ScraperBase.ScrapingStarted" />
+        /// event.
         /// </summary>
         /// <param name="e">
-        /// A <see
-        /// cref="T:CoinMarketCap.Data.Scraper.ScrapingStartedEventArgs"/> that
+        /// A
+        /// <see
+        ///     cref="T:CoinMarketCap.Data.Scraper.ScrapingStartedEventArgs" />
+        /// that
         /// contains the event data.
         /// </param>
         protected virtual void OnScrapingStarted(ScrapingStartedEventArgs e)

@@ -1,5 +1,4 @@
-﻿using CoinMarketCap.Data.Scraper;
-using System;
+﻿using System;
 using System.ComponentModel;
 using xyLOGIX.Data.Scrapers.Constants;
 using xyLOGIX.Data.Scrapers.Interfaces;

@@ -8,7 +8,7 @@
         /// <summary>
         /// Scraper for the CoinMarketCap.com website.
         /// </summary>
-        CoinMarketCep,
+        CoinMarketCap,
 
         /// <summary>
         /// Unknown strategy type.

@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xyLOGIX.Data.Scrapers", "xyLOGIX.Data.Scrapers\xyLOGIX.Data.Scrapers.csproj", "{9DCA261B-0CC3-4F49-8384-F281E098B621}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xyLOGIX.Data.Scrapers.Factories", "xyLOGIX.Data.Scrapers.Factories\xyLOGIX.Data.Scrapers.Factories.csproj", "{31988857-4D56-4FF9-88F4-250F0FC8454B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xyLOGIX.Data.Scrapers.Constants", "xyLOGIX.Data.Scrapers.Constants\xyLOGIX.Data.Scrapers.Constants.csproj", "{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xyLOGIX.Data.Scrapers.Interfaces", "xyLOGIX.Data.Scrapers.Interfaces\xyLOGIX.Data.Scrapers.Interfaces.csproj", "{12C8841D-7EDF-48C4-BEFC-EC88E1719091}"
@@ -29,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xyLOGIX.Data.Scrapers.Servi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xyLOGIX.Data.Scrapers.Services.Factories.Interfaces", "xyLOGIX.Data.Scrapers.Services.Factories.Interfaces\xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.csproj", "{7604D633-04D0-4F50-8ECD-0B73AF12D183}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xyLOGIX.Core.Debug", "..\xyLOGIX.Core.Debug.VS2019\xyLOGIX.Core.Debug\xyLOGIX.Core.Debug.csproj", "{2E4EDA4F-0D3A-442F-87B5-F0224F596A80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xyLOGIX.Core.Extensions", "..\xyLOGIX.Core.Extensions.VS2019\xyLOGIX.Core.Extensions\xyLOGIX.Core.Extensions.csproj", "{5528D7FB-B88B-4E9D-9BBD-B6B6B893666A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -45,14 +47,6 @@ Global
 		{9DCA261B-0CC3-4F49-8384-F281E098B621}.Release|x64.Build.0 = Release|x64
 		{9DCA261B-0CC3-4F49-8384-F281E098B621}.Release|x86.ActiveCfg = Release|x86
 		{9DCA261B-0CC3-4F49-8384-F281E098B621}.Release|x86.Build.0 = Release|x86
-		{31988857-4D56-4FF9-88F4-250F0FC8454B}.Debug|x64.ActiveCfg = Debug|x64
-		{31988857-4D56-4FF9-88F4-250F0FC8454B}.Debug|x64.Build.0 = Debug|x64
-		{31988857-4D56-4FF9-88F4-250F0FC8454B}.Debug|x86.ActiveCfg = Debug|x86
-		{31988857-4D56-4FF9-88F4-250F0FC8454B}.Debug|x86.Build.0 = Debug|x86
-		{31988857-4D56-4FF9-88F4-250F0FC8454B}.Release|x64.ActiveCfg = Release|x64
-		{31988857-4D56-4FF9-88F4-250F0FC8454B}.Release|x64.Build.0 = Release|x64
-		{31988857-4D56-4FF9-88F4-250F0FC8454B}.Release|x86.ActiveCfg = Release|x86
-		{31988857-4D56-4FF9-88F4-250F0FC8454B}.Release|x86.Build.0 = Release|x86
 		{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}.Debug|x64.ActiveCfg = Debug|x64
 		{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}.Debug|x64.Build.0 = Debug|x64
 		{B8C0087F-0E08-4168-9B1C-7E6A09868A4B}.Debug|x86.ActiveCfg = Debug|x86
@@ -141,6 +135,22 @@ Global
 		{7604D633-04D0-4F50-8ECD-0B73AF12D183}.Release|x64.Build.0 = Release|x64
 		{7604D633-04D0-4F50-8ECD-0B73AF12D183}.Release|x86.ActiveCfg = Release|x86
 		{7604D633-04D0-4F50-8ECD-0B73AF12D183}.Release|x86.Build.0 = Release|x86
+		{2E4EDA4F-0D3A-442F-87B5-F0224F596A80}.Debug|x64.ActiveCfg = Debug|x64
+		{2E4EDA4F-0D3A-442F-87B5-F0224F596A80}.Debug|x64.Build.0 = Debug|x64
+		{2E4EDA4F-0D3A-442F-87B5-F0224F596A80}.Debug|x86.ActiveCfg = Debug|x86
+		{2E4EDA4F-0D3A-442F-87B5-F0224F596A80}.Debug|x86.Build.0 = Debug|x86
+		{2E4EDA4F-0D3A-442F-87B5-F0224F596A80}.Release|x64.ActiveCfg = Release|x64
+		{2E4EDA4F-0D3A-442F-87B5-F0224F596A80}.Release|x64.Build.0 = Release|x64
+		{2E4EDA4F-0D3A-442F-87B5-F0224F596A80}.Release|x86.ActiveCfg = Release|x86
+		{2E4EDA4F-0D3A-442F-87B5-F0224F596A80}.Release|x86.Build.0 = Release|x86
+		{5528D7FB-B88B-4E9D-9BBD-B6B6B893666A}.Debug|x64.ActiveCfg = Debug|x64
+		{5528D7FB-B88B-4E9D-9BBD-B6B6B893666A}.Debug|x64.Build.0 = Debug|x64
+		{5528D7FB-B88B-4E9D-9BBD-B6B6B893666A}.Debug|x86.ActiveCfg = Debug|x86
+		{5528D7FB-B88B-4E9D-9BBD-B6B6B893666A}.Debug|x86.Build.0 = Debug|x86
+		{5528D7FB-B88B-4E9D-9BBD-B6B6B893666A}.Release|x64.ActiveCfg = Release|x64
+		{5528D7FB-B88B-4E9D-9BBD-B6B6B893666A}.Release|x64.Build.0 = Release|x64
+		{5528D7FB-B88B-4E9D-9BBD-B6B6B893666A}.Release|x86.ActiveCfg = Release|x86
+		{5528D7FB-B88B-4E9D-9BBD-B6B6B893666A}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

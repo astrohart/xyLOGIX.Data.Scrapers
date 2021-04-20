@@ -39,8 +39,8 @@ namespace xyLOGIX.Data.Scrapers.Interfaces
         /// (Required.) String containing the URL from which data is about to be scraped.
         /// </param>
         /// <returns>
-        /// <c>true</c> to allow the scraping operation to continue;
-        /// <c>false</c> otherwise.
+        /// <see langword="true" /> to allow the scraping operation to continue;
+        /// <see langword="false" /> otherwise.
         /// </returns>
         /// <exception cref="T:System.ArgumentException">
         /// Thrown if the required parameter, <paramref name="url" />, is passed
@@ -75,7 +75,7 @@ namespace xyLOGIX.Data.Scrapers.Interfaces
         /// Gets a value indicating whether we're at the end of the data.
         /// </summary>
         /// <returns>
-        /// <c>true</c> if there are more data to follow; <c>false</c> otherwise.
+        /// <see langword="true" /> if there are more data to follow; <see langword="false" /> otherwise.
         /// </returns>
         /// <remarks>
         /// Think of the data to be scraped as being akin to a stream.

@@ -7,8 +7,21 @@ namespace xyLOGIX.Data.Scrapers.Interfaces
     /// <summary>
     /// Defines the methods and properties that all scraper objects have in common.
     /// </summary>
-    public interface IScraper
+    /// <typeparam name="T">
+    /// Name of a POCO type that encapsulates one record of data from the
+    /// scraped website.
+    /// </typeparam>
+    public interface IScraper<T> where T : class
     {
+        /// <summary>
+        /// Gets the
+        /// <see
+        ///     cref="T:xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape" />
+        /// value
+        /// that indicates which website this scraper is being used to pull data from.
+        /// </summary>
+        WebsitesToScrape Website { get; }
+
         /// <summary>
         /// Occurs when the scrape operation is complete.
         /// </summary>
@@ -18,13 +31,6 @@ namespace xyLOGIX.Data.Scrapers.Interfaces
         /// Occurs when scraping is about to start.
         /// </summary>
         event ScrapingStartedEventHandler ScrapingStarted;
-
-        /// <summary>
-        /// Gets the <see
-        /// cref="T:xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape"/> value
-        /// that indicates which website this scraper is being used to pull data from.
-        /// </summary>
-        WebsitesToScrape Website { get; }
 
         /// <summary>
         /// Determines whether we can scrape data or not.
@@ -37,10 +43,33 @@ namespace xyLOGIX.Data.Scrapers.Interfaces
         /// <c>false</c> otherwise.
         /// </returns>
         /// <exception cref="T:System.ArgumentException">
-        /// Thrown if the required parameter, <paramref name="url"/>, is passed
-        /// a blank or <c>null</c> string for a value.
+        /// Thrown if the required parameter, <paramref name="url" />, is passed
+        /// a blank or <see langword="null" /> string for a value.
         /// </exception>
         bool CanScrape(string url);
+
+        /// <summary>
+        /// Gets the <typeparamref name="T" /> object serialized from the JSON
+        /// that is scraped from the target website's results.
+        /// </summary>
+        /// <returns>
+        /// Reference to an instance of <typeparamref name="T" /> that
+        /// contains the scraped data for the current page, or <see langword="null" /> if an
+        /// error occurred while processing the data request.
+        /// </returns>
+        /// <remarks>
+        /// With each call, this method advances to the next page.
+        /// </remarks>
+        /// <exception cref="T:System.InvalidOperationException">
+        /// Thrown if neither the
+        /// <see
+        ///     cref="F:CoinMarketCap.Data.Scraper.CoinMarketCapScraper._paginator" />
+        /// or
+        /// <see
+        ///     cref="F:CoinMarketCap.Data.Scraper.CoinMarketCapScraper._scraper" />
+        /// fields have been initialized.
+        /// </exception>
+        T GetDataFromCurrentPage();
 
         /// <summary>
         /// Gets a value indicating whether we're at the end of the data.

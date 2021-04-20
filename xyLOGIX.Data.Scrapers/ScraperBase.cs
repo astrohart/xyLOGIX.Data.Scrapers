@@ -58,6 +58,16 @@ namespace xyLOGIX.Data.Scrapers
                             throw new ArgumentNullException(nameof(paginator));
 
         /// <summary>
+        /// Constructs a new instance of
+        /// <see
+        ///     cref="T:xyLOGIX.Data.Scrapers.ScraperBase" />
+        /// and returns a reference
+        /// to it.
+        /// </summary>
+        protected ScraperBase()
+            => _paginator = null;
+
+        /// <summary>
         /// Occurs when the scrape operation is complete.
         /// </summary>
         public event EventHandler ScrapeComplete;
@@ -88,7 +98,7 @@ namespace xyLOGIX.Data.Scrapers
         /// </returns>
         /// <exception cref="T:System.ArgumentException">
         /// Thrown if the required parameter, <paramref name="url" />, is passed
-        /// a blank or <c>null</c> string for a value.
+        /// a blank or <see langword="null" /> string for a value.
         /// </exception>
         public bool CanScrape(string url)
         {

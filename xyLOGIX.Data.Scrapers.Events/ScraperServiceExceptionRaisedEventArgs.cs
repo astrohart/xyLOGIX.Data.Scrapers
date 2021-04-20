@@ -23,7 +23,7 @@ namespace xyLOGIX.Data.Scrapers.Events
        /// Thrown if the required parameter, <paramref name="url" />, is blank.
        /// </exception>
        /// <exception cref="T:System.ArgumentNullException">
-       /// Thrown if the required parameter, <paramref name="exception" /> is <c>null</c>.
+       /// Thrown if the required parameter, <paramref name="exception" /> is <see langword="null" />.
        /// </exception>
        public ScraperServiceExceptionRaisedEventArgs(string url, Exception exception)
         {

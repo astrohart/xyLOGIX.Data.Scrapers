@@ -7,11 +7,7 @@ namespace xyLOGIX.Data.Scrapers.Interfaces
     /// <summary>
     /// Defines the methods and properties that all scraper objects have in common.
     /// </summary>
-    /// <typeparam name="T">
-    /// Name of a POCO type that encapsulates one record of data from the
-    /// scraped website.
-    /// </typeparam>
-    public interface IScraper<T> where T : class
+    public interface IScraper
     {
         /// <summary>
         /// Gets the
@@ -49,33 +45,13 @@ namespace xyLOGIX.Data.Scrapers.Interfaces
         bool CanScrape(string url);
 
         /// <summary>
-        /// Gets the <typeparamref name="T" /> object serialized from the JSON
-        /// that is scraped from the target website's results.
-        /// </summary>
-        /// <returns>
-        /// Reference to an instance of <typeparamref name="T" /> that
-        /// contains the scraped data for the current page, or <see langword="null" /> if an
-        /// error occurred while processing the data request.
-        /// </returns>
-        /// <remarks>
-        /// With each call, this method advances to the next page.
-        /// </remarks>
-        /// <exception cref="T:System.InvalidOperationException">
-        /// Thrown if neither the
-        /// <see
-        ///     cref="F:CoinMarketCap.Data.Scraper.CoinMarketCapScraper._paginator" />
-        /// or
-        /// <see
-        ///     cref="F:CoinMarketCap.Data.Scraper.CoinMarketCapScraper._scraper" />
-        /// fields have been initialized.
-        /// </exception>
-        T GetDataFromCurrentPage();
-
-        /// <summary>
         /// Gets a value indicating whether we're at the end of the data.
         /// </summary>
         /// <returns>
-        /// <see langword="true" /> if there are more data to follow; <see langword="false" /> otherwise.
+        /// <see langword="true" /> if there are more data to follow;
+        /// <see
+        ///     langword="false" />
+        /// otherwise.
         /// </returns>
         /// <remarks>
         /// Think of the data to be scraped as being akin to a stream.

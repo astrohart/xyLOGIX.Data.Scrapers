@@ -24,7 +24,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
         [SetUp]
         public void Initialize()
         {
-            _scraperService = new ScraperServiceFactory().Make();
+            _scraperService = new MakeNewScraperService().FromScratch();
             _scraperService.ScraperServiceExceptionRaised +=
                 OnScraperServiceExceptionRaised;
         }

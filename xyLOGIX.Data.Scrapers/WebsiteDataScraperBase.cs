@@ -11,7 +11,9 @@ namespace xyLOGIX.Data.Scrapers
     /// Defines methods, events, and properties that all data-scraper objects
     /// share in common with each other.
     /// </summary>
-    public abstract class WebsiteDataScraperBase : IWebsiteDataScraper
+    public abstract class
+        WebsiteDataScraperBase<TModel> : IWebsiteDataScraper<TModel>
+        where TModel : class
     {
         /// <summary>
         /// Instance of an object that implements the
@@ -62,7 +64,8 @@ namespace xyLOGIX.Data.Scrapers
         /// <paramref name="scraperServiceFactory" />, were passed a
         /// <see langword="null" /> reference as an argument.
         /// </exception>
-        protected WebsiteDataScraperBase(IScrapedDataPaginator scrapedDataPaginator,
+        protected WebsiteDataScraperBase(
+            IScrapedDataPaginator scrapedDataPaginator,
             IScraperServiceFactory scraperServiceFactory)
         {
             _scrapedDataPaginator = scrapedDataPaginator ??
@@ -74,7 +77,7 @@ namespace xyLOGIX.Data.Scrapers
                                          nameof(scraperServiceFactory)
                                      );
 
-            _scraperService = _scraperServiceFactory.Make();
+            _scraperService = _scraperServiceFactory.FromScratch();
         }
 
         /// <summary>
@@ -165,6 +168,16 @@ namespace xyLOGIX.Data.Scrapers
         /// </remarks>
         public virtual void Rewind()
             => _scrapedDataPaginator?.First();
+
+        /// <summary>
+        /// Scrapes the data from the current page, and returns it serialized into an
+        /// instance of the <typeparamref name="TModel" />.
+        /// </summary>
+        /// <returns>
+        /// Reference to an instance of <typeparamref name="TModel" /> that
+        /// contains the data from the current page.
+        /// </returns>
+        public abstract TModel Scrape();
 
         /// <summary>
         /// Raises the

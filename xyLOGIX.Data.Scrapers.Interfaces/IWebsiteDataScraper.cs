@@ -7,7 +7,7 @@ namespace xyLOGIX.Data.Scrapers.Interfaces
     /// <summary>
     /// Defines the methods and properties that all scraper objects have in common.
     /// </summary>
-    public interface IWebsiteDataScraper
+    public interface IWebsiteDataScraper<TModel> where TModel : class
     {
         /// <summary>
         /// Gets the
@@ -65,5 +65,15 @@ namespace xyLOGIX.Data.Scrapers.Interfaces
         /// Think of the data to be scraped being akin to a stream.
         /// </remarks>
         void Rewind();
+
+        /// <summary>
+        /// Scrapes the data from the current page, and returns it serialized into an
+        /// instance of the <typeparamref name="TModel" />.
+        /// </summary>
+        /// <returns>
+        /// Reference to an instance of <typeparamref name="TModel" /> that
+        /// contains the data from the current page.
+        /// </returns>
+        TModel Scrape();
     }
 }

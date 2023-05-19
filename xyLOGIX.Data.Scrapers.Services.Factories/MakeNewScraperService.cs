@@ -9,7 +9,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Factories
     ///     cref="T:xyLOGIX.Data.Scrapers.Interfaces.IScraperService" />
     /// interface.
     /// </summary>
-    public class ScraperServiceFactory : IScraperServiceFactory
+    public class MakeNewScraperService : IScraperServiceFactory
     {
         /// <summary>
         /// Creates a new instance of an object that implements the
@@ -23,7 +23,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Factories
         ///     cref="T:xyLOGIX.Data.Scrapers.Interfaces.IScraperService" />
         /// interface.
         /// </returns>
-        public IScraperService Make()
+        public IScraperService FromScratch()
             => new ScraperService();
     }
 }

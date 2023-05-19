@@ -20,6 +20,6 @@ namespace xyLOGIX.Data.Scrapers.Services.Factories.Interfaces
         ///     cref="T:xyLOGIX.Data.Scrapers.Interfaces.IScraperService" />
         /// interface.
         /// </returns>
-        IScraperService Make();
+        IScraperService FromScratch();
     }
 }

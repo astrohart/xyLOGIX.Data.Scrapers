@@ -6,17 +6,19 @@
 - [Resources](#T-xyLOGIX-Data-Scrapers-Properties-Resources 'xyLOGIX.Data.Scrapers.Properties.Resources')
   - [Culture](#P-xyLOGIX-Data-Scrapers-Properties-Resources-Culture 'xyLOGIX.Data.Scrapers.Properties.Resources.Culture')
   - [ResourceManager](#P-xyLOGIX-Data-Scrapers-Properties-Resources-ResourceManager 'xyLOGIX.Data.Scrapers.Properties.Resources.ResourceManager')
-- [ScraperBase](#T-xyLOGIX-Data-Scrapers-ScraperBase 'xyLOGIX.Data.Scrapers.ScraperBase')
-  - [#ctor(paginator)](#M-xyLOGIX-Data-Scrapers-ScraperBase-#ctor-xyLOGIX-Data-Paginators-Interfaces-IPaginator- 'xyLOGIX.Data.Scrapers.ScraperBase.#ctor(xyLOGIX.Data.Paginators.Interfaces.IPaginator)')
-  - [_paginator](#F-xyLOGIX-Data-Scrapers-ScraperBase-_paginator 'xyLOGIX.Data.Scrapers.ScraperBase._paginator')
-  - [_scraperService](#F-xyLOGIX-Data-Scrapers-ScraperBase-_scraperService 'xyLOGIX.Data.Scrapers.ScraperBase._scraperService')
-  - [_scraperServiceFactory](#F-xyLOGIX-Data-Scrapers-ScraperBase-_scraperServiceFactory 'xyLOGIX.Data.Scrapers.ScraperBase._scraperServiceFactory')
-  - [Website](#P-xyLOGIX-Data-Scrapers-ScraperBase-Website 'xyLOGIX.Data.Scrapers.ScraperBase.Website')
-  - [CanScrape(url)](#M-xyLOGIX-Data-Scrapers-ScraperBase-CanScrape-System-String- 'xyLOGIX.Data.Scrapers.ScraperBase.CanScrape(System.String)')
-  - [HasMore()](#M-xyLOGIX-Data-Scrapers-ScraperBase-HasMore 'xyLOGIX.Data.Scrapers.ScraperBase.HasMore')
-  - [OnScrapeComplete()](#M-xyLOGIX-Data-Scrapers-ScraperBase-OnScrapeComplete 'xyLOGIX.Data.Scrapers.ScraperBase.OnScrapeComplete')
-  - [OnScrapingStarted(e)](#M-xyLOGIX-Data-Scrapers-ScraperBase-OnScrapingStarted-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs- 'xyLOGIX.Data.Scrapers.ScraperBase.OnScrapingStarted(xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventArgs)')
-  - [Rewind()](#M-xyLOGIX-Data-Scrapers-ScraperBase-Rewind 'xyLOGIX.Data.Scrapers.ScraperBase.Rewind')
+- [WebsiteDataScraperBase\`1](#T-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1')
+  - [#ctor(scrapedDataPaginator,scraperServiceFactory)](#M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-#ctor-xyLOGIX-Data-Paginators-Interfaces-IScrapedDataPaginator,xyLOGIX-Data-Scrapers-Services-Factories-Interfaces-IScraperServiceFactory- 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1.#ctor(xyLOGIX.Data.Paginators.Interfaces.IScrapedDataPaginator,xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory)')
+  - [#ctor()](#M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-#ctor 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1.#ctor')
+  - [_scrapedDataPaginator](#F-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-_scrapedDataPaginator 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1._scrapedDataPaginator')
+  - [_scraperService](#F-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-_scraperService 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1._scraperService')
+  - [_scraperServiceFactory](#F-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-_scraperServiceFactory 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1._scraperServiceFactory')
+  - [Website](#P-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-Website 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1.Website')
+  - [CanScrape(url)](#M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-CanScrape-System-String- 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1.CanScrape(System.String)')
+  - [HasMore()](#M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-HasMore 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1.HasMore')
+  - [OnScrapeComplete()](#M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-OnScrapeComplete 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1.OnScrapeComplete')
+  - [OnScrapingStarted(e)](#M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-OnScrapingStarted-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs- 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1.OnScrapingStarted(xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventArgs)')
+  - [Rewind()](#M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-Rewind 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1.Rewind')
+  - [Scrape()](#M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-Scrape 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1.Scrape')
 
 <a name='T-xyLOGIX-Data-Scrapers-Properties-Resources'></a>
 ## Resources `type`
@@ -44,8 +46,8 @@ Overrides the current thread's CurrentUICulture property for all
 
 Returns the cached ResourceManager instance used by this class.
 
-<a name='T-xyLOGIX-Data-Scrapers-ScraperBase'></a>
-## ScraperBase `type`
+<a name='T-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1'></a>
+## WebsiteDataScraperBase\`1 `type`
 
 ##### Namespace
 
@@ -56,13 +58,13 @@ xyLOGIX.Data.Scrapers
 Defines methods, events, and properties that all data-scraper objects
 share in common with each other.
 
-<a name='M-xyLOGIX-Data-Scrapers-ScraperBase-#ctor-xyLOGIX-Data-Paginators-Interfaces-IPaginator-'></a>
-### #ctor(paginator) `constructor`
+<a name='M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-#ctor-xyLOGIX-Data-Paginators-Interfaces-IScrapedDataPaginator,xyLOGIX-Data-Scrapers-Services-Factories-Interfaces-IScraperServiceFactory-'></a>
+### #ctor(scrapedDataPaginator,scraperServiceFactory) `constructor`
 
 ##### Summary
 
 Constructs a new instance of
-[ScraperBase](#T-xyLOGIX-Data-Scrapers-ScraperBase 'xyLOGIX.Data.Scrapers.ScraperBase')
+[WebsiteDataScraperBase](#T-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase')
 and returns a reference
 to it.
 
@@ -70,37 +72,57 @@ to it.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| paginator | [xyLOGIX.Data.Paginators.Interfaces.IPaginator](#T-xyLOGIX-Data-Paginators-Interfaces-IPaginator 'xyLOGIX.Data.Paginators.Interfaces.IPaginator') | (Required.) Reference to an instance of an object that implements
-the [IPaginator](#T-xyLOGIX-Data-Paginators-Interfaces-IPaginator 'xyLOGIX.Data.Paginators.Interfaces.IPaginator') interface. |
+| scrapedDataPaginator | [xyLOGIX.Data.Paginators.Interfaces.IScrapedDataPaginator](#T-xyLOGIX-Data-Paginators-Interfaces-IScrapedDataPaginator 'xyLOGIX.Data.Paginators.Interfaces.IScrapedDataPaginator') | (Required.) Reference to an instance of an object that implements
+the [IScrapedDataPaginator](#T-xyLOGIX-Data-Paginators-Interfaces-IScrapedDataPaginator 'xyLOGIX.Data.Paginators.Interfaces.IScrapedDataPaginator')
+interface. |
+| scraperServiceFactory | [xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory](#T-xyLOGIX-Data-Scrapers-Services-Factories-Interfaces-IScraperServiceFactory 'xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory') | (Required.) Reference to an instance of an object that implements the
+[IScraperServiceFactory](#T-xyLOGIX-Data-Scrapers-Services-Factories-Interfaces-IScraperServiceFactory 'xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory')
+interface. |
 
 ##### Exceptions
 
 | Name | Description |
 | ---- | ----------- |
-| [System.ArgumentNullException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentNullException 'System.ArgumentNullException') | Thrown if the required parameter, `paginator`, is
-passed a `null` value. |
+| [System.ArgumentNullException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentNullException 'System.ArgumentNullException') | Thrown if either of the required parameters,
+`scrapedDataPaginator` or
+`scraperServiceFactory`, were passed a
+`null` reference as an argument. |
 
-<a name='F-xyLOGIX-Data-Scrapers-ScraperBase-_paginator'></a>
-### _paginator `constants`
+<a name='M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-#ctor'></a>
+### #ctor() `constructor`
+
+##### Summary
+
+Constructs a new instance of
+[WebsiteDataScraperBase](#T-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase')
+and returns a reference
+to it.
+
+##### Parameters
+
+This constructor has no parameters.
+
+<a name='F-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-_scrapedDataPaginator'></a>
+### _scrapedDataPaginator `constants`
 
 ##### Summary
 
 Instance of an object that implements the
-[IPaginator](#T-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IPaginator 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IPaginator')
+[IScrapedDataPaginator](#T-xyLOGIX-Data-Paginators-Interfaces-IScrapedDataPaginator 'xyLOGIX.Data.Paginators.Interfaces.IScrapedDataPaginator')
 interface.
 
 ##### Remarks
 
-This object manages the paginator of scraped data for this class.
+This object manages the scrapedDataPaginator of scraped data for this class.
 
-<a name='F-xyLOGIX-Data-Scrapers-ScraperBase-_scraperService'></a>
+<a name='F-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-_scraperService'></a>
 ### _scraperService `constants`
 
 ##### Summary
 
 Reference to an instance of an object that provides scraping services.
 
-<a name='F-xyLOGIX-Data-Scrapers-ScraperBase-_scraperServiceFactory'></a>
+<a name='F-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-_scraperServiceFactory'></a>
 ### _scraperServiceFactory `constants`
 
 ##### Summary
@@ -110,7 +132,7 @@ Reference to an instance of an object that implements the
 interface which is responsible for giving us access to scraper
 service objects.
 
-<a name='P-xyLOGIX-Data-Scrapers-ScraperBase-Website'></a>
+<a name='P-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-Website'></a>
 ### Website `property`
 
 ##### Summary
@@ -120,7 +142,7 @@ Gets the
 value
 that indicates which website this scraper is being used to pull data from.
 
-<a name='M-xyLOGIX-Data-Scrapers-ScraperBase-CanScrape-System-String-'></a>
+<a name='M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-CanScrape-System-String-'></a>
 ### CanScrape(url) `method`
 
 ##### Summary
@@ -145,7 +167,7 @@ Determines whether we can scrape data or not.
 | [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | Thrown if the required parameter, `url`, is passed
 a blank or `null` string for a value. |
 
-<a name='M-xyLOGIX-Data-Scrapers-ScraperBase-HasMore'></a>
+<a name='M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-HasMore'></a>
 ### HasMore() `method`
 
 ##### Summary
@@ -154,7 +176,8 @@ Gets a value indicating whether we're at the end of the data.
 
 ##### Returns
 
-`true` if there are more data to follow; `false` otherwise.
+`true` if there are more data to follow;
+`false` otherwise.
 
 ##### Parameters
 
@@ -164,26 +187,26 @@ This method has no parameters.
 
 Think of the data to be scraped as being akin to a stream.
 
-<a name='M-xyLOGIX-Data-Scrapers-ScraperBase-OnScrapeComplete'></a>
+<a name='M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-OnScrapeComplete'></a>
 ### OnScrapeComplete() `method`
 
 ##### Summary
 
 Raises the
-[](#E-xyLOGIX-Data-Scrapers-ScraperBase-ScrapeComplete 'xyLOGIX.Data.Scrapers.ScraperBase.ScrapeComplete')
+[](#E-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase-ScrapeComplete 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase.ScrapeComplete')
 event.
 
 ##### Parameters
 
 This method has no parameters.
 
-<a name='M-xyLOGIX-Data-Scrapers-ScraperBase-OnScrapingStarted-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs-'></a>
+<a name='M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-OnScrapingStarted-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs-'></a>
 ### OnScrapingStarted(e) `method`
 
 ##### Summary
 
 Raises the
-[](#E-xyLOGIX-Data-Scrapers-ScraperBase-ScrapingStarted 'xyLOGIX.Data.Scrapers.ScraperBase.ScrapingStarted')
+[](#E-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase-ScrapingStarted 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase.ScrapingStarted')
 event.
 
 ##### Parameters
@@ -195,7 +218,7 @@ event.
 that
 contains the event data. |
 
-<a name='M-xyLOGIX-Data-Scrapers-ScraperBase-Rewind'></a>
+<a name='M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-Rewind'></a>
 ### Rewind() `method`
 
 ##### Summary
@@ -209,3 +232,20 @@ This method has no parameters.
 ##### Remarks
 
 Think of the data to be scraped being akin to a stream.
+
+<a name='M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-Scrape'></a>
+### Scrape() `method`
+
+##### Summary
+
+Scrapes the data from the current page, and returns it serialized into an
+instance of the `TModel`.
+
+##### Returns
+
+Reference to an instance of `TModel` that
+contains the data from the current page.
+
+##### Parameters
+
+This method has no parameters.

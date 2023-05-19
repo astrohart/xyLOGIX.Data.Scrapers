@@ -10,7 +10,6 @@
   - [GetHtmlContent(url)](#M-xyLOGIX-Data-Scrapers-Services-ScraperService-GetHtmlContent-System-String- 'xyLOGIX.Data.Scrapers.Services.ScraperService.GetHtmlContent(System.String)')
   - [GetTagContent(url,xpath)](#M-xyLOGIX-Data-Scrapers-Services-ScraperService-GetTagContent-System-String,System-String- 'xyLOGIX.Data.Scrapers.Services.ScraperService.GetTagContent(System.String,System.String)')
   - [OnScraperServiceExceptionRaised(e)](#M-xyLOGIX-Data-Scrapers-Services-ScraperService-OnScraperServiceExceptionRaised-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs- 'xyLOGIX.Data.Scrapers.Services.ScraperService.OnScraperServiceExceptionRaised(xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs)')
-  - [ThrowScraperEngineInitializationFailedException()](#M-xyLOGIX-Data-Scrapers-Services-ScraperService-ThrowScraperEngineInitializationFailedException 'xyLOGIX.Data.Scrapers.Services.ScraperService.ThrowScraperEngineInitializationFailedException')
 
 <a name='T-xyLOGIX-Data-Scrapers-Services-Properties-Resources'></a>
 ## Resources `type`
@@ -122,15 +121,3 @@ event.
 | e | [xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs') | A
 [ScraperServiceExceptionRaisedEventArgs](#T-CoinMarketCap-Data-Scraper-Helpers-Events-ScraperServiceExceptionRaisedEventArgs 'CoinMarketCap.Data.Scraper.Helpers.Events.ScraperServiceExceptionRaisedEventArgs')
 that contains the event data. |
-
-<a name='M-xyLOGIX-Data-Scrapers-Services-ScraperService-ThrowScraperEngineInitializationFailedException'></a>
-### ThrowScraperEngineInitializationFailedException() `method`
-
-##### Summary
-
-Throws a [InvalidOperationException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.InvalidOperationException 'System.InvalidOperationException') that
-indicates the scraping engine could not be initialized.
-
-##### Parameters
-
-This method has no parameters.

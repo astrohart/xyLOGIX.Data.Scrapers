@@ -3,95 +3,18 @@
 
 ## Contents
 
-- [IScraper](#T-xyLOGIX-Data-Scrapers-Interfaces-IScraper 'xyLOGIX.Data.Scrapers.Interfaces.IScraper')
-  - [Website](#P-xyLOGIX-Data-Scrapers-Interfaces-IScraper-Website 'xyLOGIX.Data.Scrapers.Interfaces.IScraper.Website')
-  - [CanScrape(url)](#M-xyLOGIX-Data-Scrapers-Interfaces-IScraper-CanScrape-System-String- 'xyLOGIX.Data.Scrapers.Interfaces.IScraper.CanScrape(System.String)')
-  - [HasMore()](#M-xyLOGIX-Data-Scrapers-Interfaces-IScraper-HasMore 'xyLOGIX.Data.Scrapers.Interfaces.IScraper.HasMore')
-  - [Rewind()](#M-xyLOGIX-Data-Scrapers-Interfaces-IScraper-Rewind 'xyLOGIX.Data.Scrapers.Interfaces.IScraper.Rewind')
 - [IScraperService](#T-xyLOGIX-Data-Scrapers-Interfaces-IScraperService 'xyLOGIX.Data.Scrapers.Interfaces.IScraperService')
   - [GetHtmlContent(url)](#M-xyLOGIX-Data-Scrapers-Interfaces-IScraperService-GetHtmlContent-System-String- 'xyLOGIX.Data.Scrapers.Interfaces.IScraperService.GetHtmlContent(System.String)')
   - [GetTagContent(url,xpath)](#M-xyLOGIX-Data-Scrapers-Interfaces-IScraperService-GetTagContent-System-String,System-String- 'xyLOGIX.Data.Scrapers.Interfaces.IScraperService.GetTagContent(System.String,System.String)')
+- [IWebsiteDataScraper\`1](#T-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1 'xyLOGIX.Data.Scrapers.Interfaces.IWebsiteDataScraper`1')
+  - [Website](#P-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-Website 'xyLOGIX.Data.Scrapers.Interfaces.IWebsiteDataScraper`1.Website')
+  - [CanScrape(url)](#M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-CanScrape-System-String- 'xyLOGIX.Data.Scrapers.Interfaces.IWebsiteDataScraper`1.CanScrape(System.String)')
+  - [HasMore()](#M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-HasMore 'xyLOGIX.Data.Scrapers.Interfaces.IWebsiteDataScraper`1.HasMore')
+  - [Rewind()](#M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-Rewind 'xyLOGIX.Data.Scrapers.Interfaces.IWebsiteDataScraper`1.Rewind')
+  - [Scrape()](#M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-Scrape 'xyLOGIX.Data.Scrapers.Interfaces.IWebsiteDataScraper`1.Scrape')
 - [Resources](#T-xyLOGIX-Data-Scrapers-Interfaces-Properties-Resources 'xyLOGIX.Data.Scrapers.Interfaces.Properties.Resources')
   - [Culture](#P-xyLOGIX-Data-Scrapers-Interfaces-Properties-Resources-Culture 'xyLOGIX.Data.Scrapers.Interfaces.Properties.Resources.Culture')
   - [ResourceManager](#P-xyLOGIX-Data-Scrapers-Interfaces-Properties-Resources-ResourceManager 'xyLOGIX.Data.Scrapers.Interfaces.Properties.Resources.ResourceManager')
-
-<a name='T-xyLOGIX-Data-Scrapers-Interfaces-IScraper'></a>
-## IScraper `type`
-
-##### Namespace
-
-xyLOGIX.Data.Scrapers.Interfaces
-
-##### Summary
-
-Defines the methods and properties that all scraper objects have in common.
-
-<a name='P-xyLOGIX-Data-Scrapers-Interfaces-IScraper-Website'></a>
-### Website `property`
-
-##### Summary
-
-Gets the [WebsitesToScrape](#T-xyLOGIX-Data-Scrapers-Constants-WebsitesToScrape 'xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape') value
-that indicates which website this scraper is being used to pull data from.
-
-<a name='M-xyLOGIX-Data-Scrapers-Interfaces-IScraper-CanScrape-System-String-'></a>
-### CanScrape(url) `method`
-
-##### Summary
-
-Determines whether we can scrape data or not.
-
-##### Returns
-
-`true` to allow the scraping operation to continue;
-`false` otherwise.
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| url | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) String containing the URL from which data is about to be scraped. |
-
-##### Exceptions
-
-| Name | Description |
-| ---- | ----------- |
-| [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | Thrown if the required parameter, `url`, is passed
-a blank or `null` string for a value. |
-
-<a name='M-xyLOGIX-Data-Scrapers-Interfaces-IScraper-HasMore'></a>
-### HasMore() `method`
-
-##### Summary
-
-Gets a value indicating whether we're at the end of the data.
-
-##### Returns
-
-`true` if there are more data to follow; `false` otherwise.
-
-##### Parameters
-
-This method has no parameters.
-
-##### Remarks
-
-Think of the data to be scraped as being akin to a stream.
-
-<a name='M-xyLOGIX-Data-Scrapers-Interfaces-IScraper-Rewind'></a>
-### Rewind() `method`
-
-##### Summary
-
-Rewinds the scraper back to the beginning of the data.
-
-##### Parameters
-
-This method has no parameters.
-
-##### Remarks
-
-Think of the data to be scraped being akin to a stream.
 
 <a name='T-xyLOGIX-Data-Scrapers-Interfaces-IScraperService'></a>
 ## IScraperService `type`
@@ -155,6 +78,105 @@ the desired element. |
 | Name | Description |
 | ---- | ----------- |
 | [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | Thrown if either of the two required parameters, `url` or `xpath`, are blank. |
+
+<a name='T-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1'></a>
+## IWebsiteDataScraper\`1 `type`
+
+##### Namespace
+
+xyLOGIX.Data.Scrapers.Interfaces
+
+##### Summary
+
+Defines the methods and properties that all scraper objects have in common.
+
+<a name='P-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-Website'></a>
+### Website `property`
+
+##### Summary
+
+Gets the
+[WebsitesToScrape](#T-xyLOGIX-Data-Scrapers-Constants-WebsitesToScrape 'xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape')
+value
+that indicates which website this scraper is being used to pull data from.
+
+<a name='M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-CanScrape-System-String-'></a>
+### CanScrape(url) `method`
+
+##### Summary
+
+Determines whether we can scrape data or not.
+
+##### Returns
+
+`true` to allow the scraping operation to continue;
+`false` otherwise.
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| url | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) String containing the URL from which data is about to be scraped. |
+
+##### Exceptions
+
+| Name | Description |
+| ---- | ----------- |
+| [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | Thrown if the required parameter, `url`, is passed
+a blank or `null` string for a value. |
+
+<a name='M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-HasMore'></a>
+### HasMore() `method`
+
+##### Summary
+
+Gets a value indicating whether we're at the end of the data.
+
+##### Returns
+
+`true` if there are more data to follow;
+`false`
+otherwise.
+
+##### Parameters
+
+This method has no parameters.
+
+##### Remarks
+
+Think of the data to be scraped as being akin to a stream.
+
+<a name='M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-Rewind'></a>
+### Rewind() `method`
+
+##### Summary
+
+Rewinds the scraper back to the beginning of the data.
+
+##### Parameters
+
+This method has no parameters.
+
+##### Remarks
+
+Think of the data to be scraped being akin to a stream.
+
+<a name='M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-Scrape'></a>
+### Scrape() `method`
+
+##### Summary
+
+Scrapes the data from the current page, and returns it serialized into an
+instance of the `TModel`.
+
+##### Returns
+
+Reference to an instance of `TModel` that
+contains the data from the current page.
+
+##### Parameters
+
+This method has no parameters.
 
 <a name='T-xyLOGIX-Data-Scrapers-Interfaces-Properties-Resources'></a>
 ## Resources `type`

@@ -51,7 +51,8 @@ xyLOGIX.Data.Scrapers.Events
 
 ##### Summary
 
-Defines the data that is passed by all `ScraperServiceExceptionRaised` events.
+Defines the data that is passed by all `ScraperServiceExceptionRaised`
+events.
 
 <a name='M-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs-#ctor-System-String,System-Exception-'></a>
 ### #ctor(url,exception) `constructor`
@@ -74,7 +75,8 @@ and returns a reference to it.
 | Name | Description |
 | ---- | ----------- |
 | [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | Thrown if the required parameter, `url`, is blank. |
-| [System.ArgumentNullException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentNullException 'System.ArgumentNullException') | Thrown if the required parameter, `exception` is `null`. |
+| [System.ArgumentNullException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentNullException 'System.ArgumentNullException') | Thrown if the required parameter, `exception` is
+`null`. |
 
 <a name='P-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs-Exception'></a>
 ### Exception `property`

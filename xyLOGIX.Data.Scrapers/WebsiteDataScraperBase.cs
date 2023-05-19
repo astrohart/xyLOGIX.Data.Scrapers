@@ -77,7 +77,7 @@ namespace xyLOGIX.Data.Scrapers
                                          nameof(scraperServiceFactory)
                                      );
 
-            _scraperService = _scraperServiceFactory.FromScratch();
+            _scraperService = _scraperServiceFactory.Make();
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace xyLOGIX.Data.Scrapers
         /// value
         /// that indicates which website this scraper is being used to pull data from.
         /// </summary>
-        public abstract WebsitesToScrape Website { get; protected set; }
+        public abstract WebsitesToScrape Website { get; }
 
         /// <summary>
         /// Occurs when the scrape operation is complete.

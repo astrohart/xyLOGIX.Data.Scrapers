@@ -68,6 +68,15 @@ namespace xyLOGIX.Data.Scrapers
             => _paginator = null;
 
         /// <summary>
+        /// Gets the
+        /// <see
+        ///     cref="T:xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape" />
+        /// value
+        /// that indicates which website this scraper is being used to pull data from.
+        /// </summary>
+        public abstract WebsitesToScrape Website { get; }
+
+        /// <summary>
         /// Occurs when the scrape operation is complete.
         /// </summary>
         public event EventHandler ScrapeComplete;
@@ -76,15 +85,6 @@ namespace xyLOGIX.Data.Scrapers
         /// Occurs when scraping is about to start.
         /// </summary>
         public event ScrapingStartedEventHandler ScrapingStarted;
-
-        /// <summary>
-        /// Gets the
-        /// <see
-        ///     cref="T:xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape" />
-        /// value
-        /// that indicates which website this scraper is being used to pull data from.
-        /// </summary>
-        public abstract WebsitesToScrape Website { get; }
 
         /// <summary>
         /// Determines whether we can scrape data or not.
@@ -122,7 +122,8 @@ namespace xyLOGIX.Data.Scrapers
         /// Gets a value indicating whether we're at the end of the data.
         /// </summary>
         /// <returns>
-        /// <see langword="true" /> if there are more data to follow; <see langword="false" /> otherwise.
+        /// <see langword="true" /> if there are more data to follow;
+        /// <see langword="false" /> otherwise.
         /// </returns>
         /// <remarks>
         /// Think of the data to be scraped as being akin to a stream.

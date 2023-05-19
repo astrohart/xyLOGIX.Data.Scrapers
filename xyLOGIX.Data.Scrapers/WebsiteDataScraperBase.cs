@@ -11,7 +11,7 @@ namespace xyLOGIX.Data.Scrapers
     /// Defines methods, events, and properties that all data-scraper objects
     /// share in common with each other.
     /// </summary>
-    public abstract class ScraperBase : IScraper
+    public abstract class WebsiteDataScraperBase : IWebsiteDataScraper
     {
         /// <summary>
         /// Instance of an object that implements the
@@ -41,7 +41,7 @@ namespace xyLOGIX.Data.Scrapers
         /// <summary>
         /// Constructs a new instance of
         /// <see
-        ///     cref="T:xyLOGIX.Data.Scrapers.ScraperBase" />
+        ///     cref="T:xyLOGIX.Data.Scrapers.WebsiteDataScraperBase" />
         /// and returns a reference
         /// to it.
         /// </summary>
@@ -62,7 +62,7 @@ namespace xyLOGIX.Data.Scrapers
         /// <paramref name="scraperServiceFactory" />, were passed a
         /// <see langword="null" /> reference as an argument.
         /// </exception>
-        protected ScraperBase(IScrapedDataPaginator scrapedDataPaginator,
+        protected WebsiteDataScraperBase(IScrapedDataPaginator scrapedDataPaginator,
             IScraperServiceFactory scraperServiceFactory)
         {
             _scrapedDataPaginator = scrapedDataPaginator ??
@@ -80,11 +80,11 @@ namespace xyLOGIX.Data.Scrapers
         /// <summary>
         /// Constructs a new instance of
         /// <see
-        ///     cref="T:xyLOGIX.Data.Scrapers.ScraperBase" />
+        ///     cref="T:xyLOGIX.Data.Scrapers.WebsiteDataScraperBase" />
         /// and returns a reference
         /// to it.
         /// </summary>
-        protected ScraperBase()
+        protected WebsiteDataScraperBase()
         {
             _scrapedDataPaginator = null;
             _scraperServiceFactory = null;
@@ -169,7 +169,7 @@ namespace xyLOGIX.Data.Scrapers
         /// <summary>
         /// Raises the
         /// <see
-        ///     cref="E:xyLOGIX.Data.Scrapers.ScraperBase.ScrapeComplete" />
+        ///     cref="E:xyLOGIX.Data.Scrapers.WebsiteDataScraperBase.ScrapeComplete" />
         /// event.
         /// </summary>
         protected virtual void OnScrapeComplete()
@@ -178,7 +178,7 @@ namespace xyLOGIX.Data.Scrapers
         /// <summary>
         /// Raises the
         /// <see
-        ///     cref="E:xyLOGIX.Data.Scrapers.ScraperBase.ScrapingStarted" />
+        ///     cref="E:xyLOGIX.Data.Scrapers.WebsiteDataScraperBase.ScrapingStarted" />
         /// event.
         /// </summary>
         /// <param name="e">

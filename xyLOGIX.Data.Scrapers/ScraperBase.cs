@@ -16,13 +16,13 @@ namespace xyLOGIX.Data.Scrapers
         /// <summary>
         /// Instance of an object that implements the
         /// <see
-        ///     cref="T:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IPaginator" />
+        ///     cref="T:xyLOGIX.Data.Paginators.Interfaces.IScrapedDataPaginator" />
         /// interface.
         /// </summary>
         /// <remarks>
-        /// This object manages the paginator of scraped data for this class.
+        /// This object manages the scrapedDataPaginator of scraped data for this class.
         /// </remarks>
-        protected IPaginator _paginator;
+        protected IScrapedDataPaginator _scrapedDataPaginator;
 
         /// <summary>
         /// Reference to an instance of an object that provides scraping services.
@@ -45,17 +45,37 @@ namespace xyLOGIX.Data.Scrapers
         /// and returns a reference
         /// to it.
         /// </summary>
-        /// <param name="paginator">
+        /// <param name="scrapedDataPaginator">
         /// (Required.) Reference to an instance of an object that implements
-        /// the <see cref="T:xyLOGIX.Data.Paginators.Interfaces.IPaginator" /> interface.
+        /// the <see cref="T:xyLOGIX.Data.Paginators.Interfaces.IScrapedDataPaginator" />
+        /// interface.
+        /// </param>
+        /// <param name="scraperServiceFactory">
+        /// (Required.) Reference to an instance of an object that implements the
+        /// <see
+        ///     cref="T:xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory" />
+        /// interface.
         /// </param>
         /// <exception cref="T:System.ArgumentNullException">
-        /// Thrown if the required parameter, <paramref name="paginator" />, is
-        /// passed a <see langword="null" /> value.
+        /// Thrown if either of the required parameters,
+        /// <paramref name="scrapedDataPaginator" /> or
+        /// <paramref name="scraperServiceFactory" />, were passed a
+        /// <see langword="null" /> reference as an argument.
         /// </exception>
-        protected ScraperBase(IPaginator paginator)
-            => _paginator = paginator ??
-                            throw new ArgumentNullException(nameof(paginator));
+        protected ScraperBase(IScrapedDataPaginator scrapedDataPaginator,
+            IScraperServiceFactory scraperServiceFactory)
+        {
+            _scrapedDataPaginator = scrapedDataPaginator ??
+                                    throw new ArgumentNullException(
+                                        nameof(scrapedDataPaginator)
+                                    );
+            _scraperServiceFactory = scraperServiceFactory ??
+                                     throw new ArgumentNullException(
+                                         nameof(scraperServiceFactory)
+                                     );
+
+            _scraperService = _scraperServiceFactory.Make();
+        }
 
         /// <summary>
         /// Constructs a new instance of
@@ -65,7 +85,11 @@ namespace xyLOGIX.Data.Scrapers
         /// to it.
         /// </summary>
         protected ScraperBase()
-            => _paginator = null;
+        {
+            _scrapedDataPaginator = null;
+            _scraperServiceFactory = null;
+            _scraperService = null;
+        }
 
         /// <summary>
         /// Gets the
@@ -74,7 +98,7 @@ namespace xyLOGIX.Data.Scrapers
         /// value
         /// that indicates which website this scraper is being used to pull data from.
         /// </summary>
-        public abstract WebsitesToScrape Website { get; }
+        public abstract WebsitesToScrape Website { get; protected set; }
 
         /// <summary>
         /// Occurs when the scrape operation is complete.
@@ -129,8 +153,9 @@ namespace xyLOGIX.Data.Scrapers
         /// Think of the data to be scraped as being akin to a stream.
         /// </remarks>
         public virtual bool HasMore()
-            => _paginator != null &&
-               _paginator.CurrentPage <= _paginator.TotalPages;
+            => _scrapedDataPaginator != null &&
+               _scrapedDataPaginator.CurrentPage <=
+               _scrapedDataPaginator.TotalPages;
 
         /// <summary>
         /// Rewinds the scraper back to the beginning of the data.
@@ -139,7 +164,7 @@ namespace xyLOGIX.Data.Scrapers
         /// Think of the data to be scraped being akin to a stream.
         /// </remarks>
         public virtual void Rewind()
-            => _paginator?.First();
+            => _scrapedDataPaginator?.First();
 
         /// <summary>
         /// Raises the

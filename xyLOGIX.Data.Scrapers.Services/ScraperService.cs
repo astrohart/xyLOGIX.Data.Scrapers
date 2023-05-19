@@ -41,7 +41,8 @@ namespace xyLOGIX.Data.Scrapers.Services
 
             try
             {
-                result = new HtmlWeb().Load(url).Text;
+                result = new HtmlWeb().Load(url)
+                                      .Text;
             }
             catch (Exception ex)
             {
@@ -82,24 +83,19 @@ namespace xyLOGIX.Data.Scrapers.Services
         /// </exception>
         public string GetTagContent(string url, string xpath)
         {
-            if (string.IsNullOrWhiteSpace(url))
-                throw new ArgumentException(
-                    "Value cannot be null or whitespace.", nameof(url)
-                );
-            if (string.IsNullOrWhiteSpace(xpath))
-                throw new ArgumentException(
-                    "Value cannot be null or whitespace.", nameof(xpath)
-                );
-
             var result = string.Empty;
 
             try
             {
+                if (string.IsNullOrWhiteSpace(url)) return result;
+                if (string.IsNullOrWhiteSpace(xpath)) return result;
+
                 var web = new HtmlWeb();
+                if (web == null) return result;
 
                 var doc = web.Load(url);
                 if (doc == null)
-                    ThrowScraperEngineInitializationFailedException();
+                    return result;
 
                 var link = doc.DocumentNode.SelectSingleNode(xpath);
 
@@ -116,15 +112,6 @@ namespace xyLOGIX.Data.Scrapers.Services
 
             return result;
         }
-
-        /// <summary>
-        /// Throws a <see cref="T:System.InvalidOperationException" /> that
-        /// indicates the scraping engine could not be initialized.
-        /// </summary>
-        private static void ThrowScraperEngineInitializationFailedException()
-            => throw new InvalidOperationException(
-                "Unable to initialize HTML scraping engine."
-            );
 
         /// <summary>
         /// Raises the

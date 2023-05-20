@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using xyLOGIX.Data.Paginators.Interfaces;
 using xyLOGIX.Data.Scrapers.Constants;
 using xyLOGIX.Data.Scrapers.Events;
@@ -177,7 +178,50 @@ namespace xyLOGIX.Data.Scrapers
         /// Reference to an instance of <typeparamref name="TModel" /> that
         /// contains the data from the current page.
         /// </returns>
-        public abstract TModel Scrape();
+        public abstract TModel ScrapeCurrentPage();
+
+        /// <summary>
+        /// Scrapes all the pages of available data until all data has been retrieved.
+        /// </summary>
+        /// <returns>
+        /// Collection of instances of <typeparamref name="TModel" />, one element
+        /// for each page of data.
+        /// </returns>
+        /// <remarks>
+        /// If this method fails to retrieve all the pages, it returns the pages
+        /// it has, or, if the error was unrecoverable, the empty collection.
+        /// <para />
+        /// Pages are listed in the order in which they were obtained.
+        /// </remarks>
+        public IReadOnlyCollection<TModel> ScrapeAll()
+            => throw new NotImplementedException();
+
+        /// <summary>
+        /// Scrapes all the pages of data within a certain range of page numbers.
+        /// </summary>
+        /// <param name="first">
+        /// (Required.) An <see cref="T:System.Int32" /> denoting the
+        /// number of the first page of data to be retrieved.
+        /// </param>
+        /// <param name="last">
+        /// (Required.) An <see cref="T:System.Int32" /> denoting the
+        /// number of the last page of data to be retrieved.
+        /// </param>
+        /// <returns>
+        /// If successful, a collection of instances of <typeparamref name="TModel" />, one
+        /// element for each page of data retrieved; the empty collection otherwise.
+        /// </returns>
+        /// <remarks>
+        /// If the <paramref name="first" /> page is after the
+        /// <paramref name="last" />, or if <paramref name="first" /> is less than
+        /// <c>zero</c>, or if <paramref name="last" /> is greater than the total number of
+        /// pages, then this method returns the empty collection.
+        /// <para />
+        /// The empty collection is also returned if an error occurred during the scraping
+        /// operation.
+        /// </remarks>
+        public IReadOnlyCollection<TModel> ScrapeRange(int first, int last)
+            => throw new NotImplementedException();
 
         /// <summary>
         /// Raises the

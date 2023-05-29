@@ -11,7 +11,9 @@
   - [CanScrape(url)](#M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-CanScrape-System-String- 'xyLOGIX.Data.Scrapers.Interfaces.IWebsiteDataScraper`1.CanScrape(System.String)')
   - [HasMore()](#M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-HasMore 'xyLOGIX.Data.Scrapers.Interfaces.IWebsiteDataScraper`1.HasMore')
   - [Rewind()](#M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-Rewind 'xyLOGIX.Data.Scrapers.Interfaces.IWebsiteDataScraper`1.Rewind')
-  - [Scrape()](#M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-Scrape 'xyLOGIX.Data.Scrapers.Interfaces.IWebsiteDataScraper`1.Scrape')
+  - [ScrapeAll()](#M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-ScrapeAll 'xyLOGIX.Data.Scrapers.Interfaces.IWebsiteDataScraper`1.ScrapeAll')
+  - [ScrapeCurrentPage()](#M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-ScrapeCurrentPage 'xyLOGIX.Data.Scrapers.Interfaces.IWebsiteDataScraper`1.ScrapeCurrentPage')
+  - [ScrapeRange(first,last)](#M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-ScrapeRange-System-Int32,System-Int32- 'xyLOGIX.Data.Scrapers.Interfaces.IWebsiteDataScraper`1.ScrapeRange(System.Int32,System.Int32)')
 - [Resources](#T-xyLOGIX-Data-Scrapers-Interfaces-Properties-Resources 'xyLOGIX.Data.Scrapers.Interfaces.Properties.Resources')
   - [Culture](#P-xyLOGIX-Data-Scrapers-Interfaces-Properties-Resources-Culture 'xyLOGIX.Data.Scrapers.Interfaces.Properties.Resources.Culture')
   - [ResourceManager](#P-xyLOGIX-Data-Scrapers-Interfaces-Properties-Resources-ResourceManager 'xyLOGIX.Data.Scrapers.Interfaces.Properties.Resources.ResourceManager')
@@ -161,8 +163,33 @@ This method has no parameters.
 
 Think of the data to be scraped being akin to a stream.
 
-<a name='M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-Scrape'></a>
-### Scrape() `method`
+<a name='M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-ScrapeAll'></a>
+### ScrapeAll() `method`
+
+##### Summary
+
+Scrapes all the pages of available data until all data has been retrieved.
+
+##### Returns
+
+Collection of instances of `TModel`, one element
+for each page of data.
+
+##### Parameters
+
+This method has no parameters.
+
+##### Remarks
+
+If this method fails to retrieve all the pages, it returns the pages
+it has, or, if the error was unrecoverable, the empty collection.
+
+
+
+Pages are listed in the order in which they were obtained.
+
+<a name='M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-ScrapeCurrentPage'></a>
+### ScrapeCurrentPage() `method`
 
 ##### Summary
 
@@ -177,6 +204,39 @@ contains the data from the current page.
 ##### Parameters
 
 This method has no parameters.
+
+<a name='M-xyLOGIX-Data-Scrapers-Interfaces-IWebsiteDataScraper`1-ScrapeRange-System-Int32,System-Int32-'></a>
+### ScrapeRange(first,last) `method`
+
+##### Summary
+
+Scrapes all the pages of data within a certain range of page numbers.
+
+##### Returns
+
+If successful, a collection of instances of `TModel`, one
+element for each page of data retrieved; the empty collection otherwise.
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| first | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | (Required.) An [Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') denoting the
+number of the first page of data to be retrieved. |
+| last | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | (Required.) An [Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') denoting the
+number of the last page of data to be retrieved. |
+
+##### Remarks
+
+If the `first` page is after the
+`last`, or if `first` is less than
+`zero`, or if `last` is greater than the total number of
+pages, then this method returns the empty collection.
+
+
+
+The empty collection is also returned if an error occurred during the scraping
+operation.
 
 <a name='T-xyLOGIX-Data-Scrapers-Interfaces-Properties-Resources'></a>
 ## Resources `type`

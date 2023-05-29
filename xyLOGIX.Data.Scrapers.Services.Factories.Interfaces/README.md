@@ -4,7 +4,7 @@
 ## Contents
 
 - [IScraperServiceFactory](#T-xyLOGIX-Data-Scrapers-Services-Factories-Interfaces-IScraperServiceFactory 'xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory')
-  - [FromScratch()](#M-xyLOGIX-Data-Scrapers-Services-Factories-Interfaces-IScraperServiceFactory-FromScratch 'xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory.FromScratch')
+  - [Make()](#M-xyLOGIX-Data-Scrapers-Services-Factories-Interfaces-IScraperServiceFactory-Make 'xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory.Make')
 - [Resources](#T-xyLOGIX-Data-Scrapers-Services-Factories-Interfaces-Properties-Resources 'xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.Properties.Resources')
   - [Culture](#P-xyLOGIX-Data-Scrapers-Services-Factories-Interfaces-Properties-Resources-Culture 'xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.Properties.Resources.Culture')
   - [ResourceManager](#P-xyLOGIX-Data-Scrapers-Services-Factories-Interfaces-Properties-Resources-ResourceManager 'xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.Properties.Resources.ResourceManager')
@@ -21,8 +21,8 @@ xyLOGIX.Data.Scrapers.Services.Factories.Interfaces
 Defines the public-exposed methods and properties of a scraper-service
 factory object.
 
-<a name='M-xyLOGIX-Data-Scrapers-Services-Factories-Interfaces-IScraperServiceFactory-FromScratch'></a>
-### FromScratch() `method`
+<a name='M-xyLOGIX-Data-Scrapers-Services-Factories-Interfaces-IScraperServiceFactory-Make'></a>
+### Make() `method`
 
 ##### Summary
 

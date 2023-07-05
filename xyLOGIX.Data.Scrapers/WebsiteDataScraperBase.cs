@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using xyLOGIX.Core.Debug;
 using xyLOGIX.Data.Paginators.Interfaces;
 using xyLOGIX.Data.Scrapers.Constants;
 using xyLOGIX.Data.Scrapers.Events;
@@ -130,20 +131,29 @@ namespace xyLOGIX.Data.Scrapers
         /// </exception>
         public bool CanScrape(string url)
         {
-            if (string.IsNullOrWhiteSpace(url))
-                throw new ArgumentException(
-                    "Value cannot be null or whitespace.", nameof(url)
-                );
+            var result = false;
 
-            // Create a new ScrapingStartedEventArgs, initialized with the URL
-            // passed, and then pass it to the OnScrapingStarted method. This
-            // method invokes the ScrapingStarted event. In handlers of the
-            // event, clients of this object can set the Cancel property of the
-            // event argument object to true. If they do so, then we need to
-            // report that the scraping operation must be stopped.
-            var cea = new ScrapingStartedEventArgs(url);
-            OnScrapingStarted(cea);
-            return cea.Cancel == false;
+            try
+            {
+                if (string.IsNullOrWhiteSpace(url)) return result;
+
+                // Create a new ScrapingStartedEventArgs, initialized with the URL
+                // passed, and then pass it to the OnScrapingStarted method. This
+                // method invokes the ScrapingStarted event. In handlers of the
+                // event, clients of this object can set the Cancel property of the
+                // event argument object to true. If they do so, then we need to
+                // report that the scraping operation must be stopped.
+                var cea = new ScrapingStartedEventArgs(url);
+                OnScrapingStarted(cea);
+                result = cea.Cancel == false;
+            }
+            catch (Exception ex)
+            {
+                // dump all the exception info to the log
+                DebugUtils.LogException(ex);
+            }
+
+            return result;
         }
 
         /// <summary>

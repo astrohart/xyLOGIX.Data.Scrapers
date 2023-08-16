@@ -1,4 +1,4 @@
-﻿using HtmlAgilityPack;
+using HtmlAgilityPack;
 using System;
 using xyLOGIX.Data.Scrapers.Events;
 using xyLOGIX.Data.Scrapers.Interfaces;

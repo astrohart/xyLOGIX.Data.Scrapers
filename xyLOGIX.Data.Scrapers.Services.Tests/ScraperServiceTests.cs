@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using System;
 using xyLOGIX.Data.Scrapers.Events;
 using xyLOGIX.Data.Scrapers.Interfaces;

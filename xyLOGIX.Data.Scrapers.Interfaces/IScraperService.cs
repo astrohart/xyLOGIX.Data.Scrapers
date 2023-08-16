@@ -1,4 +1,4 @@
-﻿using xyLOGIX.Data.Scrapers.Events;
+using xyLOGIX.Data.Scrapers.Events;
 
 namespace xyLOGIX.Data.Scrapers.Interfaces
 {

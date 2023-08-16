@@ -1,4 +1,4 @@
-﻿namespace xyLOGIX.Data.Scrapers.Constants
+namespace xyLOGIX.Data.Scrapers.Constants
 {
     /// <summary>
     /// Values describing the website(s) that can be scraped with this family of libraries.

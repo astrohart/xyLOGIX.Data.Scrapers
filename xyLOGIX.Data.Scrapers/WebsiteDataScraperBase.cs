@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using xyLOGIX.Core.Debug;
 using xyLOGIX.Data.Paginators.Interfaces;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using xyLOGIX.Core.Debug;
 using xyLOGIX.Data.Paginators.Interfaces;
@@ -9,63 +9,21 @@ using xyLOGIX.Data.Scrapers.Services.Factories.Interfaces;
 
 namespace xyLOGIX.Data.Scrapers
 {
-    /// <summary>
-    /// Defines methods, events, and properties that all data-scraper objects
-    /// share in common with each other.
-    /// </summary>
+///  <summary> Defines methods, events, and properties that all data-scraper objects share in common with each other. </summary>
     public abstract class
         WebsiteDataScraperBase<TModel> : IWebsiteDataScraper<TModel>
         where TModel : class
     {
-        /// <summary>
-        /// Instance of an object that implements the
-        /// <see
-        ///     cref="T:xyLOGIX.Data.Paginators.Interfaces.IScrapedDataPaginator" />
-        /// interface.
-        /// </summary>
-        /// <remarks>
-        /// This object manages the scrapedDataPaginator of scraped data for this class.
-        /// </remarks>
+///  <summary> Instance of an object that implements the <see cref="T:xyLOGIX.Data.Paginators.Interfaces.IScrapedDataPaginator" /> interface. </summary> <remarks> This object manages the scrapedDataPaginator of scraped data for this class. </remarks>
         protected IScrapedDataPaginator _scrapedDataPaginator;
 
-        /// <summary>
-        /// Reference to an instance of an object that provides scraping services.
-        /// </summary>
+///  <summary> Reference to an instance of an object that provides scraping services. </summary>
         protected IScraperService _scraperService;
 
-        /// <summary>
-        /// Reference to an instance of an object that implements the
-        /// <see
-        ///     cref="T:xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory" />
-        /// interface which is responsible for giving us access to scraper
-        /// service objects.
-        /// </summary>
+///  <summary> Reference to an instance of an object that implements the <see cref="T:xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory" /> interface which is responsible for giving us access to scraper service objects. </summary>
         protected IScraperServiceFactory _scraperServiceFactory;
 
-        /// <summary>
-        /// Constructs a new instance of
-        /// <see
-        ///     cref="T:xyLOGIX.Data.Scrapers.WebsiteDataScraperBase" />
-        /// and returns a reference
-        /// to it.
-        /// </summary>
-        /// <param name="scrapedDataPaginator">
-        /// (Required.) Reference to an instance of an object that implements
-        /// the <see cref="T:xyLOGIX.Data.Paginators.Interfaces.IScrapedDataPaginator" />
-        /// interface.
-        /// </param>
-        /// <param name="scraperServiceFactory">
-        /// (Required.) Reference to an instance of an object that implements the
-        /// <see
-        ///     cref="T:xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory" />
-        /// interface.
-        /// </param>
-        /// <exception cref="T:System.ArgumentNullException">
-        /// Thrown if either of the required parameters,
-        /// <paramref name="scrapedDataPaginator" /> or
-        /// <paramref name="scraperServiceFactory" />, were passed a
-        /// <see langword="null" /> reference as an argument.
-        /// </exception>
+///  <summary> Constructs a new instance of <see cref="T:xyLOGIX.Data.Scrapers.WebsiteDataScraperBase" /> and returns a reference to it. </summary> <param name="scrapedDataPaginator"> (Required.) Reference to an instance of an object that implements the <see cref="T:xyLOGIX.Data.Paginators.Interfaces.IScrapedDataPaginator" /> interface. </param> <param name="scraperServiceFactory"> (Required.) Reference to an instance of an object that implements the <see cref="T:xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory" /> interface. </param> <exception cref="T:System.ArgumentNullException"> Thrown if either of the required parameters, <paramref name="scrapedDataPaginator" /> or <paramref name="scraperServiceFactory" />, were passed a <see langword="null" /> reference as an argument. </exception>
         protected WebsiteDataScraperBase(
             IScrapedDataPaginator scrapedDataPaginator,
             IScraperServiceFactory scraperServiceFactory)
@@ -82,13 +40,7 @@ namespace xyLOGIX.Data.Scrapers
             _scraperService = _scraperServiceFactory.Make();
         }
 
-        /// <summary>
-        /// Constructs a new instance of
-        /// <see
-        ///     cref="T:xyLOGIX.Data.Scrapers.WebsiteDataScraperBase" />
-        /// and returns a reference
-        /// to it.
-        /// </summary>
+///  <summary> Constructs a new instance of <see cref="T:xyLOGIX.Data.Scrapers.WebsiteDataScraperBase" /> and returns a reference to it. </summary>
         protected WebsiteDataScraperBase()
         {
             _scrapedDataPaginator = null;
@@ -96,39 +48,16 @@ namespace xyLOGIX.Data.Scrapers
             _scraperService = null;
         }
 
-        /// <summary>
-        /// Gets the
-        /// <see
-        ///     cref="T:xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape" />
-        /// value
-        /// that indicates which website this scraper is being used to pull data from.
-        /// </summary>
+///  <summary> Gets the <see cref="T:xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape" /> value that indicates which website this scraper is being used to pull data from. </summary>
         public abstract WebsitesToScrape Website { get; }
 
-        /// <summary>
-        /// Occurs when the scrape operation is complete.
-        /// </summary>
+///  <summary> Occurs when the scrape operation is complete. </summary>
         public event EventHandler ScrapeComplete;
 
-        /// <summary>
-        /// Occurs when scraping is about to start.
-        /// </summary>
+///  <summary> Occurs when scraping is about to start. </summary>
         public event ScrapingStartedEventHandler ScrapingStarted;
 
-        /// <summary>
-        /// Determines whether we can scrape data or not.
-        /// </summary>
-        /// <param name="url">
-        /// (Required.) String containing the URL from which data is about to be scraped.
-        /// </param>
-        /// <returns>
-        /// <see langword="true" /> to allow the scraping operation to continue;
-        /// <see langword="false" /> otherwise.
-        /// </returns>
-        /// <exception cref="T:System.ArgumentException">
-        /// Thrown if the required parameter, <paramref name="url" />, is passed
-        /// a blank or <see langword="null" /> string for a value.
-        /// </exception>
+///  <summary> Determines whether we can scrape data or not. </summary> <param name="url"> (Required.) String containing the URL from which data is about to be scraped. </param> <returns> <see langword="true" /> to allow the scraping operation to continue; <see langword="false" /> otherwise. </returns> <exception cref="T:System.ArgumentException"> Thrown if the required parameter, <paramref name="url" />, is passed a blank or <see langword="null" /> string for a value. </exception>
         public bool CanScrape(string url)
         {
             var result = false;
@@ -156,105 +85,32 @@ namespace xyLOGIX.Data.Scrapers
             return result;
         }
 
-        /// <summary>
-        /// Gets a value indicating whether we're at the end of the data.
-        /// </summary>
-        /// <returns>
-        /// <see langword="true" /> if there are more data to follow;
-        /// <see langword="false" /> otherwise.
-        /// </returns>
-        /// <remarks>
-        /// Think of the data to be scraped as being akin to a stream.
-        /// </remarks>
+///  <summary> Gets a value indicating whether we're at the end of the data. </summary> <returns> <see langword="true" /> if there are more data to follow; <see langword="false" /> otherwise. </returns> <remarks> Think of the data to be scraped as being akin to a stream. </remarks>
         public virtual bool HasMore()
             => _scrapedDataPaginator != null &&
                _scrapedDataPaginator.CurrentPage <=
                _scrapedDataPaginator.TotalPages;
 
-        /// <summary>
-        /// Rewinds the scraper back to the beginning of the data.
-        /// </summary>
-        /// <remarks>
-        /// Think of the data to be scraped being akin to a stream.
-        /// </remarks>
+///  <summary> Rewinds the scraper back to the beginning of the data. </summary> <remarks> Think of the data to be scraped being akin to a stream. </remarks>
         public virtual void Rewind()
             => _scrapedDataPaginator?.First();
 
-        /// <summary>
-        /// Scrapes the data from the current page, and returns it serialized into an
-        /// instance of the <typeparamref name="TModel" />.
-        /// </summary>
-        /// <returns>
-        /// Reference to an instance of <typeparamref name="TModel" /> that
-        /// contains the data from the current page.
-        /// </returns>
+///  <summary> Scrapes the data from the current page, and returns it serialized into an instance of the <typeparamref name="TModel" />. </summary> <returns> Reference to an instance of <typeparamref name="TModel" /> that contains the data from the current page. </returns>
         public abstract TModel ScrapeCurrentPage();
 
-        /// <summary>
-        /// Scrapes all the pages of available data until all data has been retrieved.
-        /// </summary>
-        /// <returns>
-        /// Collection of instances of <typeparamref name="TModel" />, one element
-        /// for each page of data.
-        /// </returns>
-        /// <remarks>
-        /// If this method fails to retrieve all the pages, it returns the pages
-        /// it has, or, if the error was unrecoverable, the empty collection.
-        /// <para />
-        /// Pages are listed in the order in which they were obtained.
-        /// </remarks>
+///  <summary> Scrapes all the pages of available data until all data has been retrieved. </summary> <returns> Collection of instances of <typeparamref name="TModel" />, one element for each page of data. </returns> <remarks> If this method fails to retrieve all the pages, it returns the pages it has, or, if the error was unrecoverable, the empty collection. <para /> Pages are listed in the order in which they were obtained. </remarks>
         public IReadOnlyCollection<TModel> ScrapeAll()
             => throw new NotImplementedException();
 
-        /// <summary>
-        /// Scrapes all the pages of data within a certain range of page numbers.
-        /// </summary>
-        /// <param name="first">
-        /// (Required.) An <see cref="T:System.Int32" /> denoting the
-        /// number of the first page of data to be retrieved.
-        /// </param>
-        /// <param name="last">
-        /// (Required.) An <see cref="T:System.Int32" /> denoting the
-        /// number of the last page of data to be retrieved.
-        /// </param>
-        /// <returns>
-        /// If successful, a collection of instances of <typeparamref name="TModel" />, one
-        /// element for each page of data retrieved; the empty collection otherwise.
-        /// </returns>
-        /// <remarks>
-        /// If the <paramref name="first" /> page is after the
-        /// <paramref name="last" />, or if <paramref name="first" /> is less than
-        /// <c>zero</c>, or if <paramref name="last" /> is greater than the total number of
-        /// pages, then this method returns the empty collection.
-        /// <para />
-        /// The empty collection is also returned if an error occurred during the scraping
-        /// operation.
-        /// </remarks>
+///  <summary> Scrapes all the pages of data within a certain range of page numbers. </summary> <param name="first"> (Required.) An <see cref="T:System.Int32" /> denoting the number of the first page of data to be retrieved. </param> <param name="last"> (Required.) An <see cref="T:System.Int32" /> denoting the number of the last page of data to be retrieved. </param> <returns> If successful, a collection of instances of <typeparamref name="TModel" />, one element for each page of data retrieved; the empty collection otherwise. </returns> <remarks> If the <paramref name="first" /> page is after the <paramref name="last" />, or if <paramref name="first" /> is less than <c>zero</c>, or if <paramref name="last" /> is greater than the total number of pages, then this method returns the empty collection. <para /> The empty collection is also returned if an error occurred during the scraping operation. </remarks>
         public IReadOnlyCollection<TModel> ScrapeRange(int first, int last)
             => throw new NotImplementedException();
 
-        /// <summary>
-        /// Raises the
-        /// <see
-        ///     cref="E:xyLOGIX.Data.Scrapers.WebsiteDataScraperBase.ScrapeComplete" />
-        /// event.
-        /// </summary>
+///  <summary> Raises the <see cref="E:xyLOGIX.Data.Scrapers.WebsiteDataScraperBase.ScrapeComplete" /> event. </summary>
         protected virtual void OnScrapeComplete()
             => ScrapeComplete?.Invoke(this, EventArgs.Empty);
 
-        /// <summary>
-        /// Raises the
-        /// <see
-        ///     cref="E:xyLOGIX.Data.Scrapers.WebsiteDataScraperBase.ScrapingStarted" />
-        /// event.
-        /// </summary>
-        /// <param name="e">
-        /// A
-        /// <see
-        ///     cref="T:CoinMarketCap.Data.Scraper.ScrapingStartedEventArgs" />
-        /// that
-        /// contains the event data.
-        /// </param>
+///  <summary> Raises the <see cref="E:xyLOGIX.Data.Scrapers.WebsiteDataScraperBase.ScrapingStarted" /> event. </summary> <param name="e"> A <see cref="T:CoinMarketCap.Data.Scraper.ScrapingStartedEventArgs" /> that contains the event data. </param>
         protected virtual void OnScrapingStarted(ScrapingStartedEventArgs e)
             => ScrapingStarted?.Invoke(this, e);
     }

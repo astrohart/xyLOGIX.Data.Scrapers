@@ -1,4 +1,4 @@
-﻿<a name='assembly'></a>
+<a name='assembly'></a>
 # xyLOGIX.Data.Scrapers.Services
 
 ## Contents
@@ -27,8 +27,7 @@ A strongly-typed resource class, for looking up localized strings, etc.
 
 ##### Summary
 
-Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+Overrides the current thread's CurrentUICulture property for all resource lookups using this strongly typed resource class.
 
 <a name='P-xyLOGIX-Data-Scrapers-Services-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`
@@ -53,13 +52,11 @@ Scrapes content from the Web and provides parsing helper methods.
 
 ##### Summary
 
-Gets the HTML content of the Web resource with the specified
-`url`.
+Gets the HTML content of the Web resource with the specified `url`.
 
 ##### Returns
 
-String containing the content obtained; blank if not found or if a
-problem occurred.
+String containing the content obtained; blank if not found or if a problem occurred.
 
 ##### Parameters
 
@@ -78,46 +75,34 @@ problem occurred.
 
 ##### Summary
 
-Obtains the HTML from the specified `url` and then
-extracts the inner-text content of the element at the
-`xpath`
-provided.
+Obtains the HTML from the specified `url` and then extracts the inner-text content of the element at the `xpath` provided.
 
 ##### Returns
 
-String containing the inner textual content of the tag looked up by
-the `xpath` query provided, or blank if the tag was
-not found or a problem occurred.
+String containing the inner textual content of the tag looked up by the `xpath` query provided, or blank if the tag was not found or a problem occurred.
 
 ##### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | url | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) String containing the URL of the page to download and parse. |
-| xpath | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) String containing the XPATH query to use in order to
-find the desired element. |
+| xpath | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) String containing the XPATH query to use in order to find the desired element. |
 
 ##### Exceptions
 
 | Name | Description |
 | ---- | ----------- |
-| [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | Thrown if either of the two required parameters,
-`url`
-or `xpath`, are blank. |
+| [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | Thrown if either of the two required parameters, `url` or `xpath`, are blank. |
 
 <a name='M-xyLOGIX-Data-Scrapers-Services-ScraperService-OnScraperServiceExceptionRaised-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs-'></a>
 ### OnScraperServiceExceptionRaised(e) `method`
 
 ##### Summary
 
-Raises the
-[](#E-CoinMarketCap-Data-Scraper-Helpers-Scraper-ScraperServiceExceptionRaised 'CoinMarketCap.Data.Scraper.Helpers.Scraper.ScraperServiceExceptionRaised')
-event.
+Raises the [](#E-CoinMarketCap-Data-Scraper-Helpers-Scraper-ScraperServiceExceptionRaised 'CoinMarketCap.Data.Scraper.Helpers.Scraper.ScraperServiceExceptionRaised') event.
 
 ##### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| e | [xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs') | A
-[ScraperServiceExceptionRaisedEventArgs](#T-CoinMarketCap-Data-Scraper-Helpers-Events-ScraperServiceExceptionRaisedEventArgs 'CoinMarketCap.Data.Scraper.Helpers.Events.ScraperServiceExceptionRaisedEventArgs')
-that contains the event data. |
+| e | [xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs') | A [ScraperServiceExceptionRaisedEventArgs](#T-CoinMarketCap-Data-Scraper-Helpers-Events-ScraperServiceExceptionRaisedEventArgs 'CoinMarketCap.Data.Scraper.Helpers.Events.ScraperServiceExceptionRaisedEventArgs') that contains the event data. |

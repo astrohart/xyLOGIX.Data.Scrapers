@@ -1,4 +1,4 @@
-﻿<a name='assembly'></a>
+<a name='assembly'></a>
 # xyLOGIX.Data.Scrapers.Events
 
 ## Contents
@@ -32,8 +32,7 @@ A strongly-typed resource class, for looking up localized strings, etc.
 
 ##### Summary
 
-Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+Overrides the current thread's CurrentUICulture property for all resource lookups using this strongly typed resource class.
 
 <a name='P-xyLOGIX-Data-Scrapers-Events-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`
@@ -51,17 +50,14 @@ xyLOGIX.Data.Scrapers.Events
 
 ##### Summary
 
-Defines the data that is passed by all `ScraperServiceExceptionRaised`
-events.
+Defines the data that is passed by all `ScraperServiceExceptionRaised` events.
 
 <a name='M-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs-#ctor-System-String,System-Exception-'></a>
 ### #ctor(url,exception) `constructor`
 
 ##### Summary
 
-Creates a new instance of
-[ExceptionRaisedEventArgs](#T-CoinMarketCap-Data-Scraper-Helpers-Events-ExceptionRaisedEventArgs 'CoinMarketCap.Data.Scraper.Helpers.Events.ExceptionRaisedEventArgs')
-and returns a reference to it.
+Creates a new instance of [ExceptionRaisedEventArgs](#T-CoinMarketCap-Data-Scraper-Helpers-Events-ExceptionRaisedEventArgs 'CoinMarketCap.Data.Scraper.Helpers.Events.ExceptionRaisedEventArgs') and returns a reference to it.
 
 ##### Parameters
 
@@ -75,8 +71,7 @@ and returns a reference to it.
 | Name | Description |
 | ---- | ----------- |
 | [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | Thrown if the required parameter, `url`, is blank. |
-| [System.ArgumentNullException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentNullException 'System.ArgumentNullException') | Thrown if the required parameter, `exception` is
-`null`. |
+| [System.ArgumentNullException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentNullException 'System.ArgumentNullException') | Thrown if the required parameter, `exception` is `null`. |
 
 <a name='P-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs-Exception'></a>
 ### Exception `property`
@@ -125,15 +120,13 @@ Defines the data that is passed by all events of type [ScrapingStartedEventHandl
 
 ##### Summary
 
-Constructs a new instance of [ScrapingStartedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventArgs')
-and returns a reference to it.
+Constructs a new instance of [ScrapingStartedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventArgs') and returns a reference to it.
 
 ##### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| url | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) String containing the URL of the web page that is about to
-be scraped. |
+| url | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) String containing the URL of the web page that is about to be scraped. |
 
 ##### Exceptions
 

@@ -1,4 +1,4 @@
-﻿<a name='assembly'></a>
+<a name='assembly'></a>
 # xyLOGIX.Data.Scrapers.Services.Factories
 
 ## Contents
@@ -25,8 +25,7 @@ A strongly-typed resource class, for looking up localized strings, etc.
 
 ##### Summary
 
-Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+Overrides the current thread's CurrentUICulture property for all resource lookups using this strongly typed resource class.
 
 <a name='P-xyLOGIX-Data-Scrapers-Services-Factories-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`
@@ -44,24 +43,18 @@ xyLOGIX.Data.Scrapers.Services.Factories
 
 ##### Summary
 
-Creates instances of objects that implement the
-[IScraperService](#T-xyLOGIX-Data-Scrapers-Interfaces-IScraperService 'xyLOGIX.Data.Scrapers.Interfaces.IScraperService')
-interface.
+Creates instances of objects that implement the [IScraperService](#T-xyLOGIX-Data-Scrapers-Interfaces-IScraperService 'xyLOGIX.Data.Scrapers.Interfaces.IScraperService') interface.
 
 <a name='M-xyLOGIX-Data-Scrapers-Services-Factories-ScraperServiceFactory-Make'></a>
 ### Make() `method`
 
 ##### Summary
 
-Creates a new instance of an object that implements the
-[IScraperService](#T-xyLOGIX-Data-Scrapers-Interfaces-IScraperService 'xyLOGIX.Data.Scrapers.Interfaces.IScraperService')
-interface and returns a reference to it.
+Creates a new instance of an object that implements the [IScraperService](#T-xyLOGIX-Data-Scrapers-Interfaces-IScraperService 'xyLOGIX.Data.Scrapers.Interfaces.IScraperService') interface and returns a reference to it.
 
 ##### Returns
 
-Reference to a new instance of an object that implements the
-[IScraperService](#T-xyLOGIX-Data-Scrapers-Interfaces-IScraperService 'xyLOGIX.Data.Scrapers.Interfaces.IScraperService')
-interface.
+Reference to a new instance of an object that implements the [IScraperService](#T-xyLOGIX-Data-Scrapers-Interfaces-IScraperService 'xyLOGIX.Data.Scrapers.Interfaces.IScraperService') interface.
 
 ##### Parameters
 

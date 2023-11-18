@@ -7,7 +7,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Factories.Interfaces
     /// Defines the public-exposed methods and properties of a
     /// scraper-service factory object.
     /// </summary>
-    [Actor]
+    [Synchronized]
     public interface IScraperServiceFactory
     {
         /// <summary>

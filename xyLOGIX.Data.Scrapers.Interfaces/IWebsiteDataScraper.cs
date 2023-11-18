@@ -10,7 +10,7 @@ namespace xyLOGIX.Data.Scrapers.Interfaces
     /// Defines the methods and properties that all scraper objects have in
     /// common.
     /// </summary>
-    [Actor]
+    [Synchronized]
     public interface IWebsiteDataScraper<TModel> where TModel : class
     {
         /// <summary>

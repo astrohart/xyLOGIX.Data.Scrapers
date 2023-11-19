@@ -61,7 +61,9 @@ xyLOGIX.Data.Scrapers.Services.Tests
 
 ##### Summary
 
-Unit tests for objects that implement the [IScraperService](#T-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService') interface.
+Unit tests for objects that implement the
+[IScraperService](#T-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService')
+interface.
 
 <a name='F-xyLOGIX-Data-Scrapers-Services-Tests-ScraperServiceTests-EXAMPLE_COM_HEADER_CONTENT'></a>
 ### EXAMPLE_COM_HEADER_CONTENT `constants`
@@ -103,7 +105,9 @@ URL of the example.com website.
 
 ##### Summary
 
-Reference to an instance of a class that implements the [IScraperService](#T-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService') interface.
+Reference to an instance of a class that implements the
+[IScraperService](#T-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService')
+interface.
 
 ##### Remarks
 
@@ -114,7 +118,8 @@ This is the object that provides scraping services.
 
 ##### Summary
 
-Initializes the dependency variable [_scraper](#F-xyLOGIX-Data-Scrapers-Tests-ScraperTests-_scraper 'xyLOGIX.Data.Scrapers.Tests.ScraperTests._scraper') .
+Initializes the dependency variable
+[_scraper](#F-xyLOGIX-Data-Scrapers-Tests-ScraperTests-_scraper 'xyLOGIX.Data.Scrapers.Tests.ScraperTests._scraper') .
 
 ##### Parameters
 
@@ -125,14 +130,18 @@ This method has no parameters.
 
 ##### Summary
 
-Handles the [](#E-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-ExceptionRaised 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.ExceptionRaised') event.
+Handles the
+[](#E-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-ExceptionRaised 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.ExceptionRaised')
+event.
 
 ##### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') | Reference to an instance of the object that raised the event. |
-| e | [xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs') | An [EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') that contains the event data. |
+| sender | [System.Object](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object 'System.Object') | Reference to an instance of the object that raised the
+event. |
+| e | [xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs') | An [EventArgs](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.EventArgs 'System.EventArgs') that contains the event
+data. |
 
 ##### Remarks
 
@@ -143,7 +152,10 @@ This method reports the error information to the console.
 
 ##### Summary
 
-Asserts the [GetHtmlContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetHtmlContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetHtmlContent') method returns nothing when fed a nonsensical website URL from which to retrieve the HTML content.
+Asserts the
+[GetHtmlContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetHtmlContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetHtmlContent')
+method returns nothing when fed a nonsensical website URL from which to
+retrieve the HTML content.
 
 ##### Parameters
 
@@ -154,7 +166,10 @@ This method has no parameters.
 
 ##### Summary
 
-Asserts the [GetHtmlContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetHtmlContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetHtmlContent') method throws a [ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') when given a blank value for the URL from which to obtain content from.
+Asserts the
+[GetHtmlContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetHtmlContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetHtmlContent')
+method throws a [ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') when given a blank
+value for the URL from which to obtain content from.
 
 ##### Parameters
 
@@ -165,7 +180,10 @@ This method has no parameters.
 
 ##### Summary
 
-Asserts the [GetHtmlContent](#M-CoinMarketCap-Data-Scraper-Helpers-IScraperService-GetHtmlContent 'CoinMarketCap.Data.Scraper.Helpers.IScraperService.GetHtmlContent') method returns the HTML content for the homepage of the example.com website when fed a valid URL for the website.
+Asserts the
+[GetHtmlContent](#M-CoinMarketCap-Data-Scraper-Helpers-IScraperService-GetHtmlContent 'CoinMarketCap.Data.Scraper.Helpers.IScraperService.GetHtmlContent')
+method returns the HTML content for the homepage of the example.com website
+when fed a valid URL for the website.
 
 ##### Parameters
 
@@ -176,7 +194,10 @@ This method has no parameters.
 
 ##### Summary
 
-Asserts the [GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.IScraperService.GetTagContent') method returns the correct content of the <h1> tag in the body of the homepage HTML content of the example.com website when fed valid XPATH.
+Asserts the
+[GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.IScraperService.GetTagContent')
+method returns the correct content of the <h1> tag in the body of the
+homepage HTML content of the example.com website when fed valid XPATH.
 
 ##### Parameters
 
@@ -187,7 +208,10 @@ This method has no parameters.
 
 ##### Summary
 
-Asserts the [GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent') method returns the empty string when fed a valid URL for the example.com website but invalid XPATH for the page header.
+Asserts the
+[GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent')
+method returns the empty string when fed a valid URL for the example.com
+website but invalid XPATH for the page header.
 
 ##### Parameters
 
@@ -198,7 +222,10 @@ This method has no parameters.
 
 ##### Summary
 
-Asserts the [GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent') method returns the empty string when fed invalid (but non-blank) data for both its parameters.
+Asserts the
+[GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent')
+method returns the empty string when fed invalid (but non-blank) data for both
+its parameters.
 
 ##### Parameters
 
@@ -209,7 +236,10 @@ This method has no parameters.
 
 ##### Summary
 
-Asserts the [GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent') method returns the empty string when fed an invalid URL for its url parameter, despite being provided valid XPATH.
+Asserts the
+[GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent')
+method returns the empty string when fed an invalid URL for its url parameter,
+despite being provided valid XPATH.
 
 ##### Parameters
 
@@ -220,7 +250,10 @@ This method has no parameters.
 
 ##### Summary
 
-Asserts the [GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent') method returns the empty string when fed a valid URL for its url parameter, despite being provided invalid XPATH.
+Asserts the
+[GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent')
+method returns the empty string when fed a valid URL for its url parameter,
+despite being provided invalid XPATH.
 
 ##### Parameters
 
@@ -231,7 +264,10 @@ This method has no parameters.
 
 ##### Summary
 
-Asserts the [GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent') method throws a [ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') when the empty string is passed for both of its parameters.
+Asserts the
+[GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent')
+method throws a [ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') when the empty string
+is passed for both of its parameters.
 
 ##### Parameters
 
@@ -242,7 +278,11 @@ This method has no parameters.
 
 ##### Summary
 
-Asserts the [GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent') method throws a [ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') when a non-blank string is passed for its xpath parameter, and the empty string is passed for its url parameter.
+Asserts the
+[GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent')
+method throws a [ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') when a non-blank
+string is passed for its xpath parameter, and the empty string is passed for
+its url parameter.
 
 ##### Parameters
 
@@ -253,7 +293,11 @@ This method has no parameters.
 
 ##### Summary
 
-Asserts the [GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent') method throws a [ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') when a non-blank string is passed for its URL parameter, and the empty string is passed for its xpath parameter.
+Asserts the
+[GetTagContent](#M-CoinMarketCap-Data-Scraper-Helpers-Interfaces-IScraperService-GetTagContent 'CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService.GetTagContent')
+method throws a [ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') when a non-blank
+string is passed for its URL parameter, and the empty string is passed for its
+xpath parameter.
 
 ##### Parameters
 

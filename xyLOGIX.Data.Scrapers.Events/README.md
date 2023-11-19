@@ -96,13 +96,15 @@ xyLOGIX.Data.Scrapers.Events
 
 ##### Summary
 
-Defines the method signature for the handlers of a `ScraperServiceExceptionRaised` event.
+Defines the method signature for the handlers of a
+`ScraperServiceExceptionRaised` event.
 
 ##### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| sender | [T:xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventHandler](#T-T-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventHandler 'T:xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventHandler') | Reference to the instance of the object that raised the event. |
+| sender | [T:xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventHandler](#T-T-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventHandler 'T:xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventHandler') | Reference to the instance of the object that raised the
+event. |
 
 <a name='T-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs'></a>
 ## ScrapingStartedEventArgs `type`
@@ -150,10 +152,13 @@ xyLOGIX.Data.Scrapers.Events
 
 ##### Summary
 
-Defines the method signature for the handlers of the [](#E-CoinMarketCap-Data-Scraper-CoinMarketCapScraper-ScrapingStarted 'CoinMarketCap.Data.Scraper.CoinMarketCapScraper.ScrapingStarted') event.
+Defines the method signature for the handlers of the
+[](#E-CoinMarketCap-Data-Scraper-CoinMarketCapScraper-ScrapingStarted 'CoinMarketCap.Data.Scraper.CoinMarketCapScraper.ScrapingStarted')
+event.
 
 ##### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| sender | [T:xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventHandler](#T-T-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventHandler 'T:xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventHandler') | Reference to the instance of the object that raised the event. |
+| sender | [T:xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventHandler](#T-T-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventHandler 'T:xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventHandler') | Reference to the instance of the object that raised the
+event. |

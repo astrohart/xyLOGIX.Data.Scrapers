@@ -13,6 +13,7 @@
   - [_scraperService](#F-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-_scraperService 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1._scraperService')
   - [_scraperServiceFactory](#F-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-_scraperServiceFactory 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1._scraperServiceFactory')
   - [Website](#P-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-Website 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1.Website')
+  - [#cctor()](#M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-#cctor 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1.#cctor')
   - [CanScrape(url)](#M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-CanScrape-System-String- 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1.CanScrape(System.String)')
   - [HasMore()](#M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-HasMore 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1.HasMore')
   - [OnScrapeComplete()](#M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-OnScrapeComplete 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase`1.OnScrapeComplete')
@@ -141,6 +142,23 @@ interface which is responsible for giving us access to scraper service objects.
 Gets the
 [WebsitesToScrape](#T-xyLOGIX-Data-Scrapers-Constants-WebsitesToScrape 'xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape') value that
 indicates which website this scraper is being used to pull data from.
+
+<a name='M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-#cctor'></a>
+### #cctor() `method`
+
+##### Summary
+
+Initializes static data or performs actions that need to be performed once only
+for the [WebsiteDataScraperBase](#T-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase 'xyLOGIX.Data.Scrapers.WebsiteDataScraperBase') class.
+
+##### Parameters
+
+This method has no parameters.
+
+##### Remarks
+
+This constructor is called automatically prior to the first instance being
+created or before any static members are referenced.
 
 <a name='M-xyLOGIX-Data-Scrapers-WebsiteDataScraperBase`1-CanScrape-System-String-'></a>
 ### CanScrape(url) `method`

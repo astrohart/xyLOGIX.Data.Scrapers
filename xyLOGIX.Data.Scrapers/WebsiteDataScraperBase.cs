@@ -1,4 +1,6 @@
-﻿using PostSharp.Patterns.Threading;
+﻿using PostSharp.Patterns.Diagnostics;
+using PostSharp.Patterns.Model;
+using PostSharp.Patterns.Threading;
 using System;
 using System.Collections.Generic;
 using xyLOGIX.Core.Debug;
@@ -27,13 +29,13 @@ namespace xyLOGIX.Data.Scrapers
         /// This object manages the scrapedDataPaginator of scraped data for this
         /// class.
         /// </remarks>
-        protected IScrapedDataPaginator _scrapedDataPaginator;
+        [Reference] protected IScrapedDataPaginator _scrapedDataPaginator;
 
         /// <summary>
         /// Reference to an instance of an object that provides scraping
         /// services.
         /// </summary>
-        protected IScraperService _scraperService;
+        [Reference] protected IScraperService _scraperService;
 
         /// <summary>
         /// Reference to an instance of an object that implements the
@@ -41,7 +43,18 @@ namespace xyLOGIX.Data.Scrapers
         ///     cref="T:xyLOGIX.Data.Scrapers.Services.Factories.Interfaces.IScraperServiceFactory" />
         /// interface which is responsible for giving us access to scraper service objects.
         /// </summary>
-        protected IScraperServiceFactory _scraperServiceFactory;
+        [Reference] protected IScraperServiceFactory _scraperServiceFactory;
+
+        /// <summary>
+        /// Initializes static data or performs actions that need to be performed once only
+        /// for the <see cref="T:xyLOGIX.Data.Scrapers.WebsiteDataScraperBase" /> class.
+        /// </summary>
+        /// <remarks>
+        /// This constructor is called automatically prior to the first instance being
+        /// created or before any static members are referenced.
+        /// </remarks>
+        [Log(AttributeExclude = true)]
+        static WebsiteDataScraperBase() { }
 
         /// <summary>
         /// Constructs a new instance of
@@ -66,6 +79,7 @@ namespace xyLOGIX.Data.Scrapers
         /// <paramref name="scraperServiceFactory" />, were passed a
         /// <see langword="null" /> reference as an argument.
         /// </exception>
+        [Log(AttributeExclude = true)]
         protected WebsiteDataScraperBase(
             IScrapedDataPaginator scrapedDataPaginator,
             IScraperServiceFactory scraperServiceFactory
@@ -88,6 +102,7 @@ namespace xyLOGIX.Data.Scrapers
         /// <see cref="T:xyLOGIX.Data.Scrapers.WebsiteDataScraperBase" /> and returns a
         /// reference to it.
         /// </summary>
+        [Log(AttributeExclude = true)]
         protected WebsiteDataScraperBase()
         {
             _scrapedDataPaginator = null;

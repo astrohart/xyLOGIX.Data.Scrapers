@@ -7,13 +7,17 @@
   - [Culture](#P-xyLOGIX-Data-Scrapers-Events-Properties-Resources-Culture 'xyLOGIX.Data.Scrapers.Events.Properties.Resources.Culture')
   - [ResourceManager](#P-xyLOGIX-Data-Scrapers-Events-Properties-Resources-ResourceManager 'xyLOGIX.Data.Scrapers.Events.Properties.Resources.ResourceManager')
 - [ScraperServiceExceptionRaisedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs')
+  - [#ctor()](#M-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs-#ctor 'xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs.#ctor')
   - [#ctor(url,exception)](#M-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs-#ctor-System-String,System-Exception- 'xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs.#ctor(System.String,System.Exception)')
   - [Exception](#P-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs-Exception 'xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs.Exception')
   - [Url](#P-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs-Url 'xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs.Url')
+  - [#cctor()](#M-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs-#cctor 'xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs.#cctor')
 - [ScraperServiceExceptionRaisedEventHandler](#T-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventHandler 'xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventHandler')
 - [ScrapingStartedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventArgs')
+  - [#ctor()](#M-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs-#ctor 'xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventArgs.#ctor')
   - [#ctor(url)](#M-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs-#ctor-System-String- 'xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventArgs.#ctor(System.String)')
   - [Url](#P-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs-Url 'xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventArgs.Url')
+  - [#cctor()](#M-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs-#cctor 'xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventArgs.#cctor')
 - [ScrapingStartedEventHandler](#T-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventHandler 'xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventHandler')
 
 <a name='T-xyLOGIX-Data-Scrapers-Events-Properties-Resources'></a>
@@ -50,28 +54,48 @@ xyLOGIX.Data.Scrapers.Events
 
 ##### Summary
 
-Defines the data that is passed by all `ScraperServiceExceptionRaised` events.
+Defines the data that is passed by all
+`ScraperServiceExceptionRaised` events.
+
+<a name='M-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs-#ctor'></a>
+### #ctor() `constructor`
+
+##### Summary
+
+Creates a new instance of
+[ScraperServiceExceptionRaisedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs')
+and returns a reference to it.
+
+##### Parameters
+
+This constructor has no parameters.
 
 <a name='M-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs-#ctor-System-String,System-Exception-'></a>
 ### #ctor(url,exception) `constructor`
 
 ##### Summary
 
-Creates a new instance of [ExceptionRaisedEventArgs](#T-CoinMarketCap-Data-Scraper-Helpers-Events-ExceptionRaisedEventArgs 'CoinMarketCap.Data.Scraper.Helpers.Events.ExceptionRaisedEventArgs') and returns a reference to it.
+Creates a new instance of
+[ExceptionRaisedEventArgs](#T-CoinMarketCap-Data-Scraper-Helpers-Events-ExceptionRaisedEventArgs 'CoinMarketCap.Data.Scraper.Helpers.Events.ExceptionRaisedEventArgs')
+and returns a reference to it.
 
 ##### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| url | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) String containing the URL of the content currently being parsed. |
-| exception | [System.Exception](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Exception 'System.Exception') | (Required.) A [Exception](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Exception 'System.Exception') that describes the error. |
+| url | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) String containing the URL of the content
+currently being parsed. |
+| exception | [System.Exception](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Exception 'System.Exception') | (Required.) A [Exception](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Exception 'System.Exception') that
+describes the error. |
 
 ##### Exceptions
 
 | Name | Description |
 | ---- | ----------- |
-| [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | Thrown if the required parameter, `url`, is blank. |
-| [System.ArgumentNullException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentNullException 'System.ArgumentNullException') | Thrown if the required parameter, `exception` is `null`. |
+| [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | Thrown if the required parameter,
+`url`, is blank. |
+| [System.ArgumentNullException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentNullException 'System.ArgumentNullException') | Thrown if the required
+parameter, `exception` is `null`. |
 
 <a name='P-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs-Exception'></a>
 ### Exception `property`
@@ -85,7 +109,27 @@ Gets a [Exception](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&
 
 ##### Summary
 
-Gets a string containing the URL of the web content currently being parsed.
+Gets a string containing the URL of the web content currently being
+parsed.
+
+<a name='M-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs-#cctor'></a>
+### #cctor() `method`
+
+##### Summary
+
+Initializes static data or performs actions that need to be performed once only
+for the
+[ScraperServiceExceptionRaisedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScraperServiceExceptionRaisedEventArgs')
+class.
+
+##### Parameters
+
+This method has no parameters.
+
+##### Remarks
+
+This constructor is called automatically prior to the first instance being
+created or before any static members are referenced.
 
 <a name='T-xyLOGIX-Data-Scrapers-Events-ScraperServiceExceptionRaisedEventHandler'></a>
 ## ScraperServiceExceptionRaisedEventHandler `type`
@@ -115,26 +159,44 @@ xyLOGIX.Data.Scrapers.Events
 
 ##### Summary
 
-Defines the data that is passed by all events of type [ScrapingStartedEventHandler](#T-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventHandler 'xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventHandler').
+Defines the data that is passed by all events of type
+[ScrapingStartedEventHandler](#T-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventHandler 'xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventHandler').
+
+<a name='M-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs-#ctor'></a>
+### #ctor() `constructor`
+
+##### Summary
+
+Creates a new instance of
+[ScrapingStartedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventArgs') and
+returns a reference to it.
+
+##### Parameters
+
+This constructor has no parameters.
 
 <a name='M-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs-#ctor-System-String-'></a>
 ### #ctor(url) `constructor`
 
 ##### Summary
 
-Constructs a new instance of [ScrapingStartedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventArgs') and returns a reference to it.
+Constructs a new instance of
+[ScrapingStartedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventArgs') and
+returns a reference to it.
 
 ##### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| url | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) String containing the URL of the web page that is about to be scraped. |
+| url | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) String containing the URL of the web page that
+is about to be scraped. |
 
 ##### Exceptions
 
 | Name | Description |
 | ---- | ----------- |
-| [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | Thrown if the `url` parameter is blank. |
+| [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | Thrown if the
+`url` parameter is blank. |
 
 <a name='P-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs-Url'></a>
 ### Url `property`
@@ -142,6 +204,24 @@ Constructs a new instance of [ScrapingStartedEventArgs](#T-xyLOGIX-Data-Scrapers
 ##### Summary
 
 Gets the URL of the web page that is about to be scraped.
+
+<a name='M-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs-#cctor'></a>
+### #cctor() `method`
+
+##### Summary
+
+Initializes static data or performs actions that need to be performed once only
+for the [ScrapingStartedEventArgs](#T-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventArgs 'xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventArgs')
+class.
+
+##### Parameters
+
+This method has no parameters.
+
+##### Remarks
+
+This constructor is called automatically prior to the first instance being
+created or before any static members are referenced.
 
 <a name='T-xyLOGIX-Data-Scrapers-Events-ScrapingStartedEventHandler'></a>
 ## ScrapingStartedEventHandler `type`

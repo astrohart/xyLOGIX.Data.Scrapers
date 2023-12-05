@@ -1,5 +1,4 @@
 using PostSharp.Patterns.Diagnostics;
-using PostSharp.Patterns.Model;
 using PostSharp.Patterns.Threading;
 using System;
 using System.Collections.Generic;
@@ -118,11 +117,9 @@ namespace xyLOGIX.Data.Scrapers
         public abstract WebsitesToScrape Website { get; }
 
         /// <summary> Occurs when the scrape operation is complete. </summary>
-        [WeakEvent]
         public event EventHandler ScrapeComplete;
 
         /// <summary> Occurs when scraping is about to start. </summary>
-        [WeakEvent]
         public event ScrapingStartedEventHandler ScrapingStarted;
 
         /// <summary> Determines whether we can scrape data or not. </summary>

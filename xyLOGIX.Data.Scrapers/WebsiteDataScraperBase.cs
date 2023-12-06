@@ -1,4 +1,5 @@
 using PostSharp.Patterns.Diagnostics;
+using PostSharp.Patterns.Model;
 using PostSharp.Patterns.Threading;
 using System;
 using System.Collections.Generic;
@@ -109,18 +110,18 @@ namespace xyLOGIX.Data.Scrapers
             _scraperService = null;
         }
 
+        /// <summary> Occurs when the scrape operation is complete. </summary>
+        public event EventHandler ScrapeComplete;
+
+        /// <summary> Occurs when scraping is about to start. </summary>
+        public event ScrapingStartedEventHandler ScrapingStarted;
+
         /// <summary>
         /// Gets the
         /// <see cref="T:xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape" /> value that
         /// indicates which website this scraper is being used to pull data from.
         /// </summary>
         public abstract WebsitesToScrape Website { get; }
-
-        /// <summary> Occurs when the scrape operation is complete. </summary>
-        public event EventHandler ScrapeComplete;
-
-        /// <summary> Occurs when scraping is about to start. </summary>
-        public event ScrapingStartedEventHandler ScrapingStarted;
 
         /// <summary> Determines whether we can scrape data or not. </summary>
         /// <param name="url">

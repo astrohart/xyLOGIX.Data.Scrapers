@@ -12,7 +12,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
     /// <see cref="T:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService" />
     /// interface.
     /// </summary>
-    [TextFixture, ExplicitlySynchronized]
+    [TestFixture, ExplicitlySynchronized]
     public class ScraperServiceTests
     {
         /// <summary>

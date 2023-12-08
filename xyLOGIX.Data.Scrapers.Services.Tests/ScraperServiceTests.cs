@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using PostSharp.Patterns.Threading;
 using System;
 using xyLOGIX.Data.Scrapers.Events;
@@ -12,7 +12,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
     /// <see cref="T:CoinMarketCap.Data.Scraper.Helpers.Interfaces.IScraperService" />
     /// interface.
     /// </summary>
-    [TestFixture]
+    [TextFixture, ExplicitlySynchronized]
     public class ScraperServiceTests
     {
         /// <summary>

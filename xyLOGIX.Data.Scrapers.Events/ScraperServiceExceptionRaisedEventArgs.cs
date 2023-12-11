@@ -1,4 +1,5 @@
-﻿using PostSharp.Patterns.Diagnostics;
+using PostSharp.Patterns.Threading;
+using PostSharp.Patterns.Diagnostics;
 using System;
 
 namespace xyLOGIX.Data.Scrapers.Events
@@ -7,6 +8,7 @@ namespace xyLOGIX.Data.Scrapers.Events
     /// Defines the data that is passed by all
     /// <c>ScraperServiceExceptionRaised</c> events.
     /// </summary>
+[ExplicitlySynchronized]
     public class ScraperServiceExceptionRaisedEventArgs : EventArgs
     {
         /// <summary>

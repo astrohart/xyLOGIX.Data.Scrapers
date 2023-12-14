@@ -1,5 +1,5 @@
-using PostSharp.Patterns.Threading;
 using PostSharp.Patterns.Diagnostics;
+using PostSharp.Patterns.Threading;
 using System;
 using System.ComponentModel;
 
@@ -9,7 +9,7 @@ namespace xyLOGIX.Data.Scrapers.Events
     /// Defines the data that is passed by all events of type
     /// <see cref="T:xyLOGIX.Data.Scrapers.Events.ScrapingStartedEventHandler" />.
     /// </summary>
-[ExplicitlySynchronized]
+    [ExplicitlySynchronized]
     public class ScrapingStartedEventArgs : CancelEventArgs
     {
         /// <summary>

@@ -102,7 +102,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
                 () => content =
                     _scraperService.GetHtmlContent(VALID_EXAMPLE_COM_URL)
             );
-            Assert.IsNotEmpty(content);
+            ClassicAssert.IsNotEmpty(content);
         }
 
         /// <summary>
@@ -120,8 +120,8 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
                     VALID_EXAMPLE_COM_URL, VALID_EXAMPLE_COM_HEADER_XPATH
                 )
             );
-            Assert.IsNotEmpty(content);
-            Assert.AreEqual(EXAMPLE_COM_HEADER_CONTENT, content);
+            ClassicAssert.IsNotEmpty(content);
+            ClassicAssert.AreEqual(EXAMPLE_COM_HEADER_CONTENT, content);
         }
 
         /// <summary>

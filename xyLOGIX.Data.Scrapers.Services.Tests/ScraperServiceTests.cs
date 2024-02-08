@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using PostSharp.Patterns.Threading;
 using System;
 using xyLOGIX.Data.Scrapers.Events;
@@ -67,7 +68,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
             Assert.DoesNotThrow(
                 () => content = _scraperService.GetHtmlContent(INVALID_URL)
             );
-            Assert.IsEmpty(content);
+            ClassicAssert.IsEmpty(content);
         }
 
         /// <summary>
@@ -85,7 +86,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
             Assert.Throws<ArgumentException>(
                 () => content = _scraperService.GetHtmlContent(string.Empty)
             );
-            Assert.IsEmpty(content);
+            ClassicAssert.IsEmpty(content);
         }
 
         /// <summary>
@@ -141,7 +142,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
                     VALID_EXAMPLE_COM_URL, INVALID_EXAMPLE_COM_HEADER_XPATH
                 )
             );
-            Assert.IsEmpty(content);
+            ClassicAssert.IsEmpty(content);
         }
 
         /// <summary>
@@ -161,7 +162,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
                     INVALID_URL, NONSENSE_XPATH
                 )
             );
-            Assert.IsEmpty(content);
+            ClassicAssert.IsEmpty(content);
         }
 
         /// <summary>
@@ -181,7 +182,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
                     INVALID_URL, VALID_EXAMPLE_COM_HEADER_XPATH
                 )
             );
-            Assert.IsEmpty(content);
+            ClassicAssert.IsEmpty(content);
         }
 
         /// <summary>
@@ -201,7 +202,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
                     VALID_EXAMPLE_COM_URL, NONSENSE_XPATH
                 )
             );
-            Assert.IsEmpty(content);
+            ClassicAssert.IsEmpty(content);
         }
 
         /// <summary>
@@ -221,7 +222,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
                     string.Empty, string.Empty
                 )
             );
-            Assert.IsEmpty(content);
+            ClassicAssert.IsEmpty(content);
         }
 
         /// <summary>
@@ -242,7 +243,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
                     string.Empty, INVALID_EXAMPLE_COM_HEADER_XPATH
                 )
             );
-            Assert.IsEmpty(content);
+            ClassicAssert.IsEmpty(content);
         }
 
         /// <summary>
@@ -263,7 +264,7 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
                     INVALID_URL, string.Empty
                 )
             );
-            Assert.IsEmpty(content);
+            ClassicAssert.IsEmpty(content);
         }
 
         /// <summary>

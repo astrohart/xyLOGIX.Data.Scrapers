@@ -1,4 +1,4 @@
-﻿namespace xyLOGIX.Data.Scrapers.Events
+namespace xyLOGIX.Data.Scrapers.Events
 {
     /// <summary>
     /// Defines the method signature for the handlers of a

@@ -1,4 +1,4 @@
-﻿using PostSharp.Patterns.Threading;
+using PostSharp.Patterns.Threading;
 using xyLOGIX.Data.Scrapers.Interfaces;
 
 namespace xyLOGIX.Data.Scrapers.Services.Factories.Interfaces

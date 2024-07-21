@@ -57,6 +57,6 @@ namespace xyLOGIX.Data.Scrapers.Events
         }
 
         /// <summary> Gets the URL of the web page that is about to be scraped. </summary>
-        public string Url { get; }
+        public string Url { [DebuggerStepThrough] get; }
     }
 }

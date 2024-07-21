@@ -121,7 +121,7 @@ namespace xyLOGIX.Data.Scrapers
         /// <see cref="T:xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape" /> value that
         /// indicates which website this scraper is being used to pull data from.
         /// </summary>
-        public abstract WebsitesToScrape Website { get; }
+        public abstract WebsitesToScrape Website { [DebuggerStepThrough] get; }
 
         /// <summary> Determines whether we can scrape data or not. </summary>
         /// <param name="url">

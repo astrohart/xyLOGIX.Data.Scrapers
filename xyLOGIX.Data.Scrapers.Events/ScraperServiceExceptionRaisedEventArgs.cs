@@ -72,12 +72,12 @@ namespace xyLOGIX.Data.Scrapers.Events
         }
 
         /// <summary> Gets a <see cref="T:System.Exception" /> that describes the error. </summary>
-        public Exception Exception { get; }
+        public Exception Exception { [DebuggerStepThrough] get; }
 
         /// <summary>
         /// Gets a string containing the URL of the web content currently being
         /// parsed.
         /// </summary>
-        public string Url { get; }
+        public string Url { [DebuggerStepThrough] get; }
     }
 }

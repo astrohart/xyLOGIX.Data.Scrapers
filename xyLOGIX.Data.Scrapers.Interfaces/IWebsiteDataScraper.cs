@@ -18,7 +18,7 @@ namespace xyLOGIX.Data.Scrapers.Interfaces
         /// <see cref="T:xyLOGIX.Data.Scrapers.Constants.WebsitesToScrape" /> value that
         /// indicates which website this scraper is being used to pull data from.
         /// </summary>
-        WebsitesToScrape Website { get; }
+        WebsitesToScrape Website { [DebuggerStepThrough] get; }
 
         /// <summary> Occurs when the scrape operation is complete. </summary>
         event EventHandler ScrapeComplete;

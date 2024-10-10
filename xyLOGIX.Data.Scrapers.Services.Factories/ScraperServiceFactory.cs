@@ -1,4 +1,4 @@
-using xyLOGIX.Data.Scrapers.Interfaces;
+﻿using xyLOGIX.Data.Scrapers.Interfaces;
 using xyLOGIX.Data.Scrapers.Services.Factories.Interfaces;
 
 namespace xyLOGIX.Data.Scrapers.Services.Factories

@@ -1,4 +1,4 @@
-using HtmlAgilityPack;
+﻿using HtmlAgilityPack;
 using PostSharp.Patterns.Threading;
 using System;
 using xyLOGIX.Data.Scrapers.Events;

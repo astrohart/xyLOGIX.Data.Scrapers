@@ -15,7 +15,7 @@
     /// contains the event data.
     /// </param>
     public delegate void ScrapingStartedEventHandler(
-        object sender,
-        ScrapingStartedEventArgs e
+        [NotLogged] object sender,
+        [NotLogged] ScrapingStartedEventArgs e
     );
 }

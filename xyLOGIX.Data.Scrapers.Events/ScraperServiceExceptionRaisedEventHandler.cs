@@ -15,7 +15,7 @@
     /// that contains the event data.
     /// </param>
     public delegate void ScraperServiceExceptionRaisedEventHandler(
-        object sender,
-        ScraperServiceExceptionRaisedEventArgs e
+        [NotLogged] object sender,
+        [NotLogged] ScraperServiceExceptionRaisedEventArgs e
     );
 }

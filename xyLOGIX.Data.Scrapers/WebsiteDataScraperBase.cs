@@ -254,7 +254,7 @@ namespace xyLOGIX.Data.Scrapers
         /// contains the event data.
         /// </param>
         [Yielder]
-        protected virtual void OnScrapingStarted(ScrapingStartedEventArgs e)
+        protected virtual void OnScrapingStarted(ScrapingStarted[NotLogged] EventArgs e)
             => ScrapingStarted?.Invoke(this, e);
     }
 }

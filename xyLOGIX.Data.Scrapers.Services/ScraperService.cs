@@ -124,7 +124,7 @@ namespace xyLOGIX.Data.Scrapers.Services
         /// </param>
         [Yielder]
         private void OnScraperServiceExceptionRaised(
-            ScraperServiceExceptionRaisedEventArgs e
+        [NotLogged] ScraperServiceExceptionRaisedEventArgs e
         )
             => ScraperServiceExceptionRaised?.Invoke(this, e);
     }

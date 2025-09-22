@@ -284,8 +284,8 @@ namespace xyLOGIX.Data.Scrapers.Services.Tests
         /// <remarks> This method reports the error information to the console. </remarks>
         [EntryPoint]        
         private static void OnScraperServiceExceptionRaised(
-            object sender,
-            ScraperServiceExceptionRaisedEventArgs e
+            [NotLogged] object sender,
+            [NotLogged] ScraperServiceExceptionRaisedEventArgs e
         )
         {
             if (e == null) return;

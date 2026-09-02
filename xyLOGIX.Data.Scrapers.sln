@@ -46,6 +46,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xyLOGIX.Collections.Synchro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{31065D6B-34EB-4504-A945-A442BE36C059}"
 	ProjectSection(SolutionItems) = preProject
+		2 Sep 2026 Robust Visual Studio Package Manager Console Automation Script Guidelines Rev C.md = 2 Sep 2026 Robust Visual Studio Package Manager Console Automation Script Guidelines Rev C.md
 		xyLOGIX.Data.Scrapers.pssln = xyLOGIX.Data.Scrapers.pssln
 	EndProjectSection
 EndProject
